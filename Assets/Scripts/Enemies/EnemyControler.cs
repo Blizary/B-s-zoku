@@ -13,12 +13,17 @@ public class EnemyControler : MonoBehaviour
     private float currentHealth;
     private bool canMove;
 
+    // Cached component references
+    private Animator myAnimator;
+
     // Start is called before the first frame update
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player");//needs replacement in the future to acomodate 2 players
         currentHealth = health;
         canMove = true;
+
+        myAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -59,5 +64,13 @@ public class EnemyControler : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         Destroy(this.gameObject);
 
+    }
+
+    /// This function is called externally by the PlayerAttackController script to damage them the appropriate amount
+    public void Damage(float damage)
+    {
+        currentHealth -= damage;
+        Debug.Log("Enemy Was Hit for " + damage + " - " + currentHealth + " health remaining.");
+        myAnimator.SetTrigger("EnemyWasHit");
     }
 }

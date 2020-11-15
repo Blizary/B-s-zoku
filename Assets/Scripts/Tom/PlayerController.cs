@@ -12,12 +12,30 @@ public class PlayerController : MonoBehaviour
     // Cached component references
     Rigidbody2D myRigidbody;
     SpriteRenderer mySpriteRenderer;
+    public GameObject myAttackRange;
+    BoxCollider2D myAttackRangeCollider;
+    PlayerAttackController myPAC;
+
+    /// COMBAT SYSTEM CODE
+    /// This system is a first test for the player combat
+    /// Once the first attack is done, the player will have a certain amount of time
+    /// to perform attack2, if he does so succesfully he will again have a certain amount
+    /// of time to perform the combo. 
+    /// For now the system just uses booleans and coroutines but this might change in the future.
+    // Combat variables
+    [SerializeField] bool attack1WasPerformed = false;
+    [SerializeField] bool attack2WasPerformed = false;
+    [SerializeField] float timeBetweenAttack1And2 = 0.5f;
+    [SerializeField] float timeBetweenAttack2AndCombo = 3f;
+
 
     private void Start()
     {
         //myCC = GetComponent<CharacterController>();
         myRigidbody = GetComponent<Rigidbody2D>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
+        myAttackRangeCollider = myAttackRange.GetComponent<BoxCollider2D>();
+        myPAC = myAttackRange.GetComponent<PlayerAttackController>();
     }
 
     // Update is called once per frame
@@ -35,8 +53,13 @@ public class PlayerController : MonoBehaviour
             if (Mathf.Sign(myRigidbody.velocity.x) < Mathf.Epsilon)
             {
                 mySpriteRenderer.flipX = true;
+                myAttackRangeCollider.offset = new Vector2(-0.75f, 0);
             }
-            else mySpriteRenderer.flipX = false;
+            else
+            {
+                mySpriteRenderer.flipX = false;
+                myAttackRangeCollider.offset = new Vector2(0.75f, 0);
+            }
         }
     }
 
@@ -54,5 +77,44 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 playerVelocity = new Vector2(walkInput.x * movementSpeed, walkInput.y * movementSpeed);
         myRigidbody.velocity = playerVelocity;
+    }
+
+    public void OnAttack1(InputAction.CallbackContext context)
+    {
+        if (context.performed && !attack1WasPerformed)
+        {
+            myPAC.ExecuteAttack1();
+            attack1WasPerformed = true;
+            StartCoroutine(Attack1PerformedReset());
+        }
+    }
+
+    public void OnAttack2(InputAction.CallbackContext context)
+    {
+        if (context.performed && attack1WasPerformed && !attack2WasPerformed)
+        {
+            myPAC.ExecuteAttack2();
+            attack2WasPerformed = true;
+            StartCoroutine(Attack2PerformedReset());
+        }
+    }
+
+    public void OnCombo(InputAction.CallbackContext context)
+    {
+        if (context.performed && attack2WasPerformed)
+        {
+            myPAC.ExecuteCombo();
+        }
+    }
+
+    IEnumerator Attack1PerformedReset()
+    {
+        yield return new WaitForSeconds(timeBetweenAttack1And2);
+        attack1WasPerformed = false;
+    }
+    IEnumerator Attack2PerformedReset()
+    {
+        yield return new WaitForSeconds(timeBetweenAttack2AndCombo);
+        attack2WasPerformed = false;
     }
 }
