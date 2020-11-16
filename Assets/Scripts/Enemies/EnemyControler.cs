@@ -42,7 +42,7 @@ public class EnemyControler : MonoBehaviour
         if (canMove)
         {
             transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
-        }    
+        }
     }
 
     /// <summary>

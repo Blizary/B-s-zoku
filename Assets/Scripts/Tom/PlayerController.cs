@@ -7,7 +7,6 @@ public class PlayerController : MonoBehaviour
 {
     Vector2 walkInput;
     [SerializeField] float movementSpeed = 5f;
-    [SerializeField] float jumpSpeed = 7.5f;
 
     // Cached component references
     Rigidbody2D myRigidbody;
