@@ -9,6 +9,7 @@ public class EnemyControler : MonoBehaviour
     public float health;
 
     public GameObject target;
+    public GameObject explosionPS;
 
     private float currentHealth;
     private bool canMove;
@@ -38,11 +39,10 @@ public class EnemyControler : MonoBehaviour
     /// </summary>
     void ChaseTarget()
     {
-        if(canMove)
+        if (canMove)
         {
             transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
-        }
-       
+        }    
     }
 
     /// <summary>
@@ -61,14 +61,19 @@ public class EnemyControler : MonoBehaviour
     private IEnumerator Death()
     {
         //QUEU ANIMATIONS AND PRATICLES HERE
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.0f);
+        Instantiate(explosionPS, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
 
     }
 
     /// This function is called externally by the PlayerAttackController script to damage them the appropriate amount
-    public void Damage(float damage)
+    public void Damage(float damage, GameObject player)
     {
+        // Every time the enemy gets hit we want to give them a slight knockback
+        Vector2 moveDirection = player.GetComponent<Rigidbody2D>().transform.position - transform.position;
+        GetComponent<Rigidbody2D>().AddForce(moveDirection.normalized * -120f);
+
         currentHealth -= damage;
         Debug.Log("Enemy Was Hit for " + damage + " - " + currentHealth + " health remaining.");
         myAnimator.SetTrigger("EnemyWasHit");

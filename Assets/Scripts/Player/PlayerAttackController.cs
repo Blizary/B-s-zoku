@@ -29,7 +29,7 @@ public class PlayerAttackController : MonoBehaviour
     {
         foreach(GameObject go in _inRange)
         {
-            go.GetComponent<EnemyControler>().Damage(Attack1Damage);
+            go.GetComponent<EnemyControler>().Damage(Attack1Damage, gameObject.transform.parent.gameObject);
         }
     }
 
@@ -37,7 +37,7 @@ public class PlayerAttackController : MonoBehaviour
     {
         foreach (GameObject go in _inRange)
         {
-            go.GetComponent<EnemyControler>().Damage(Attack2Damage);
+            go.GetComponent<EnemyControler>().Damage(Attack2Damage, gameObject.transform.parent.gameObject);
         }
     }
 
@@ -45,7 +45,7 @@ public class PlayerAttackController : MonoBehaviour
     {
         foreach (GameObject go in _inRange)
         {
-            go.GetComponent<EnemyControler>().Damage(ComboDamage);
+            go.GetComponent<EnemyControler>().Damage(ComboDamage, gameObject.transform.parent.gameObject);
         }
     }
 }
