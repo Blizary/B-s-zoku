@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyControler : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class EnemyControler : MonoBehaviour
     public GameObject explosionPS;
     public GameObject collisionBox;
     public GameObject floatingDamageNumber;
+    public GameObject slider;
     
 
     private float currentHealth;
@@ -178,6 +180,7 @@ public class EnemyControler : MonoBehaviour
         GameObject floatingDamageNr = Instantiate(floatingDamageNumber, transform.position, Quaternion.identity);
         floatingDamageNr.transform.GetChild(0).GetComponent<TextMesh>().text = "-" + _damage;
         myAnimator.SetTrigger("EnemyWasHit");
+        slider.GetComponent<Slider>().value = currentHealth;
     }
 
     IEnumerator DamageKnowbackEffect(Vector3 dir)

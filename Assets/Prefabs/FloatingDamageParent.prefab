@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 451249374006072982}
   - component: {fileID: 1246932408}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: FloatingDamageParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,6 +55,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FloatingDamagePoints
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205443390902906548, guid: e2381fa7e045c5a419554a28d0564cd7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6667800806161714578, guid: e2381fa7e045c5a419554a28d0564cd7,
         type: 3}
