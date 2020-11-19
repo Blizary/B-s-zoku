@@ -10,9 +10,13 @@ public class EnemyControler : MonoBehaviour
 
     public GameObject target;
     public GameObject explosionPS;
+    public float minDistanceToTarget;
+    public float attackRange;
 
     private float currentHealth;
     private bool canMove;
+    private bool closeToTarget;
+    private bool inAttackRange;
 
     // Cached component references
     private Animator myAnimator;
@@ -33,9 +37,11 @@ public class EnemyControler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        DeathCheck();
+        CloseToTarget();
         KnockBack();
         ChaseTarget();
-        DeathCheck();
+       
     }
 
     /// <summary>
@@ -45,11 +51,50 @@ public class EnemyControler : MonoBehaviour
     {
         if (canMove)
         {
-            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
+            if (!closeToTarget)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
+            }
+            else
+            {
+                if (Mathf.Abs( transform.position.y - target.transform.position.y) >= 0.2f)//not on the same line as player
+                {            
+                    transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, target.transform.position.y, transform.position.z), (speed/2) * Time.deltaTime);
+                }
+                else
+                {
+                    if(Mathf.Abs( transform.position.x - target.transform.position.x) >= attackRange)
+                    transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
+                }
+            }
+           
            
         }
     }
 
+    void CloseToTarget()
+    {
+        if(Vector3.Distance(transform.position,target.transform.position)<= minDistanceToTarget)
+        {
+            closeToTarget = true;
+        }
+        else
+        {
+            closeToTarget = false;
+        }
+    }
+
+    void CheckAttackRange()
+    {
+        if(closeToTarget == true)
+        { 
+        }
+    }
+
+    void AttackPlayer()
+    {
+        
+    }
 
     /// <summary>
     /// Checks the enemys current life 
