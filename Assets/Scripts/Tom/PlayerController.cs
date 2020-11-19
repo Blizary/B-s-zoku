@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
     {
         //myCC = GetComponent<CharacterController>();
         myRigidbody = GetComponent<Rigidbody2D>();
-        mySpriteRenderer = GetComponent<SpriteRenderer>();
+        mySpriteRenderer = GetComponentInChildren<SpriteRenderer>();
         myAttackRangeCollider = myAttackRange.GetComponent<BoxCollider2D>();
         myPAC = myAttackRange.GetComponent<PlayerAttackController>();
     }
