@@ -116,4 +116,6 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(timeBetweenAttack2AndCombo);
         attack2WasPerformed = false;
     }
+
+    
 }

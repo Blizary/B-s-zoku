@@ -7,21 +7,29 @@ public class EnemyControler : MonoBehaviour
     [Header ("Properties")]
     public float speed;
     public float health;
-
-    public GameObject target;
-    public GameObject explosionPS;
+    public float damage;
     public float minDistanceToTarget;
     public float attackRange;
+    public float attackDelay;
+
+
+    [Header("References")]
+    public GameObject target;
+    public GameObject explosionPS;
+    public GameObject collisionBox;
+    
 
     private float currentHealth;
     private bool canMove;
     private bool closeToTarget;
     private bool inAttackRange;
+    private Vector3 knockbackDir;
+    private float innerAttackDelay;
 
     // Cached component references
     private Animator myAnimator;
     private Rigidbody2D rb;
-    private Vector3 knockbackDir;
+ 
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +49,10 @@ public class EnemyControler : MonoBehaviour
         CloseToTarget();
         KnockBack();
         ChaseTarget();
-       
+
+        CheckAttackRange();
+        AttackPlayer();
+
     }
 
     /// <summary>
@@ -64,7 +75,7 @@ public class EnemyControler : MonoBehaviour
                 else
                 {
                     if(Mathf.Abs( transform.position.x - target.transform.position.x) >= attackRange)
-                    transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
+                    transform.position = Vector3.MoveTowards(transform.position, target.transform.position, (speed/2) * Time.deltaTime);
                 }
             }
            
@@ -72,6 +83,9 @@ public class EnemyControler : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Checks the distance between the AI and the target player
+    /// </summary>
     void CloseToTarget()
     {
         if(Vector3.Distance(transform.position,target.transform.position)<= minDistanceToTarget)
@@ -84,16 +98,41 @@ public class EnemyControler : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Checks if the player is within melee range
+    /// </summary>
     void CheckAttackRange()
     {
-        if(closeToTarget == true)
-        { 
+        if (Vector3.Distance(transform.position, target.transform.position) <= attackRange)
+        {
+            inAttackRange = true;
+        }
+        else
+        {
+            inAttackRange = false;
+        }
+       
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    void AttackPlayer()
+    {
+        if (inAttackRange == true)//enemy is in range
+        {
+            StartCoroutine(IEAttackPlayer());
         }
     }
 
-    void AttackPlayer()
+    IEnumerator IEAttackPlayer()
     {
-        
+        canMove = false;
+
+        yield return new WaitForSeconds(attackDelay);
+        collisionBox.GetComponent<EnemyCollider>().AttackTargets(damage);
+
+        canMove = true;
     }
 
     /// <summary>
@@ -119,15 +158,15 @@ public class EnemyControler : MonoBehaviour
     }
 
     /// This function is called externally by the PlayerAttackController script to damage them the appropriate amount
-    public void Damage(float damage, GameObject player)
+    public void Damage(float _damage, GameObject _player)
     {
         // Every time the enemy gets hit we want to give them a slight knockback
-        Vector2 _knockbackDir = transform.position- player.transform.position;
+        Vector2 _knockbackDir = transform.position- _player.transform.position;
         StartCoroutine(DamageKnowbackEffect(_knockbackDir));
         //GetComponent<Rigidbody2D>().AddForce(moveDirection.normalized * -120f);
 
-        currentHealth -= damage;
-        Debug.Log("Enemy Was Hit for " + damage + " - " + currentHealth + " health remaining.");
+        currentHealth -= _damage;
+        Debug.Log("Enemy Was Hit for " + _damage + " - " + currentHealth + " health remaining.");
         myAnimator.SetTrigger("EnemyWasHit");
     }
 
