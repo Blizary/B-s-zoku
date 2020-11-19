@@ -172,6 +172,8 @@ public class EnemyControler : MonoBehaviour
     /// This function is called externally by the PlayerAttackController script to damage them the appropriate amount
     public void Damage(float _damage, GameObject _player)
     {
+        myAnimator.SetTrigger("EnemyWasHit");
+
         // Every time the enemy gets hit we want to give them a slight knockback
         Vector2 _knockbackDir = transform.position- _player.transform.position;
         StartCoroutine(DamageKnowbackEffect(_knockbackDir));
@@ -194,7 +196,7 @@ public class EnemyControler : MonoBehaviour
                 break;
         }
 
-        myAnimator.SetTrigger("EnemyWasHit");
+        
         slider.GetComponent<Slider>().value = currentHealth;
     }
 
