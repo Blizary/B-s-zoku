@@ -17,6 +17,7 @@ public class EnemyControler : MonoBehaviour
     public GameObject target;
     public GameObject explosionPS;
     public GameObject collisionBox;
+    public GameObject floatingDamageNumber;
     
 
     private float currentHealth;
@@ -167,6 +168,8 @@ public class EnemyControler : MonoBehaviour
 
         currentHealth -= _damage;
         Debug.Log("Enemy Was Hit for " + _damage + " - " + currentHealth + " health remaining.");
+        GameObject floatingDamageNr = Instantiate(floatingDamageNumber, transform.position, Quaternion.identity);
+        floatingDamageNr.transform.GetChild(0).GetComponent<TextMesh>().text = "-" + _damage;
         myAnimator.SetTrigger("EnemyWasHit");
     }
 
