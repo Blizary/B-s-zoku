@@ -178,7 +178,22 @@ public class EnemyControler : MonoBehaviour
 
         currentHealth -= _damage;
         GameObject floatingDamageNr = Instantiate(floatingDamageNumber, transform.position, Quaternion.identity);
-        floatingDamageNr.transform.GetChild(0).GetComponent<TextMesh>().text = "-" + _damage;
+        TextMesh floatingDamageNrTextMesh = floatingDamageNr.transform.GetChild(0).GetComponent<TextMesh>();
+        floatingDamageNrTextMesh.text = "-" + _damage;
+        
+        switch(_damage)
+        {
+            case 2:
+                floatingDamageNrTextMesh.color = Color.white;
+                break;
+            case 3:
+                floatingDamageNrTextMesh.color = Color.green;
+                break;
+            case 5:
+                floatingDamageNrTextMesh.color = Color.cyan;
+                break;
+        }
+
         myAnimator.SetTrigger("EnemyWasHit");
         slider.GetComponent<Slider>().value = currentHealth;
     }
