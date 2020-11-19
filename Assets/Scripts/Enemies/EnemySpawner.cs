@@ -29,6 +29,7 @@ public class EnemySpawner : MonoBehaviour
             irespawnTimer = respawnTimer;
             //spawn mob
             GameObject newMob = Instantiate(enemyPrefab, this.transform.position, Quaternion.identity, this.transform);
+            DifficulyOverTime();
             //Debug.Log("spawning");
 
         }
@@ -36,5 +37,15 @@ public class EnemySpawner : MonoBehaviour
         {
             irespawnTimer -= Time.deltaTime;
         }
+    }
+
+    void DifficulyOverTime()
+    {
+        if(respawnTimer>=2)
+        {
+            respawnTimer -= 0.5f;
+        }
+        
+
     }
 }
