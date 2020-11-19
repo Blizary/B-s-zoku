@@ -155,6 +155,7 @@ MonoBehaviour:
   explosionPS: {fileID: 2463850850944966638, guid: b47efc5506be6e24dae85a5557cbc1e5,
     type: 3}
   collisionBox: {fileID: 7281877038811809596}
+  inAttackRange: 0
 --- !u!95 &470798484
 Animator:
   serializedVersion: 3
@@ -192,7 +193,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &325118607549041371
 Transform:
   m_ObjectHideFlags: 0
