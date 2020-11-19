@@ -16,6 +16,8 @@ public class EnemyControler : MonoBehaviour
 
     // Cached component references
     private Animator myAnimator;
+    private Rigidbody2D rb;
+    private Vector3 knockbackDir;
 
     // Start is called before the first frame update
     void Start()
@@ -25,11 +27,13 @@ public class EnemyControler : MonoBehaviour
         canMove = true;
 
         myAnimator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        KnockBack();
         ChaseTarget();
         DeathCheck();
     }
@@ -42,8 +46,10 @@ public class EnemyControler : MonoBehaviour
         if (canMove)
         {
             transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
+           
         }
     }
+
 
     /// <summary>
     /// Checks the enemys current life 
@@ -71,11 +77,33 @@ public class EnemyControler : MonoBehaviour
     public void Damage(float damage, GameObject player)
     {
         // Every time the enemy gets hit we want to give them a slight knockback
-        Vector2 moveDirection = player.GetComponent<Rigidbody2D>().transform.position - transform.position;
-        GetComponent<Rigidbody2D>().AddForce(moveDirection.normalized * -120f);
+        Vector2 _knockbackDir = transform.position- player.transform.position;
+        StartCoroutine(DamageKnowbackEffect(_knockbackDir));
+        //GetComponent<Rigidbody2D>().AddForce(moveDirection.normalized * -120f);
 
         currentHealth -= damage;
         Debug.Log("Enemy Was Hit for " + damage + " - " + currentHealth + " health remaining.");
         myAnimator.SetTrigger("EnemyWasHit");
+    }
+
+    IEnumerator DamageKnowbackEffect(Vector3 dir)
+    {
+        canMove = false;
+        dir = dir.normalized;
+        dir = transform.position + (dir*0.5f);
+        knockbackDir = dir;
+        //particle on hit
+        yield return new WaitForSeconds(1);
+        knockbackDir = Vector3.zero;
+        canMove = true;
+          
+    }
+
+    void KnockBack()
+    {
+        if(knockbackDir!=Vector3.zero)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, knockbackDir, speed * Time.deltaTime*2);
+        }
     }
 }
