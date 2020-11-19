@@ -29,7 +29,7 @@ public class EnemySpawner : MonoBehaviour
             irespawnTimer = respawnTimer;
             //spawn mob
             GameObject newMob = Instantiate(enemyPrefab, this.transform.position, Quaternion.identity, this.transform);
-            Debug.Log("spawning");
+            //Debug.Log("spawning");
 
         }
         else

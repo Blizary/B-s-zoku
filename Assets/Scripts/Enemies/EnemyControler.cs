@@ -173,10 +173,8 @@ public class EnemyControler : MonoBehaviour
         // Every time the enemy gets hit we want to give them a slight knockback
         Vector2 _knockbackDir = transform.position- _player.transform.position;
         StartCoroutine(DamageKnowbackEffect(_knockbackDir));
-        //GetComponent<Rigidbody2D>().AddForce(moveDirection.normalized * -120f);
 
         currentHealth -= _damage;
-        Debug.Log("Enemy Was Hit for " + _damage + " - " + currentHealth + " health remaining.");
         GameObject floatingDamageNr = Instantiate(floatingDamageNumber, transform.position, Quaternion.identity);
         floatingDamageNr.transform.GetChild(0).GetComponent<TextMesh>().text = "-" + _damage;
         myAnimator.SetTrigger("EnemyWasHit");
