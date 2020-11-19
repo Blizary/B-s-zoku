@@ -29,6 +29,11 @@ public class MainLevelManager : MonoBehaviour
     {
         instructionsUI.SetActive(false);
         deathUI.SetActive(true);
+        GameObject.Find("Timer").GetComponent<GameTimeManager>().StopTimer();
+        foreach (Transform child in GameObject.Find("SpawnerList").transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
     }
 }
 
