@@ -20,7 +20,7 @@ public class EnemyCollider : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log(col.gameObject.name + " : " + gameObject.name + " : " + Time.time);
+        //Debug.Log(col.gameObject.name + " : " + gameObject.name + " : " + Time.time);
         if(col.CompareTag("Player"))
         {
             playersInRange.Add(col.gameObject);
@@ -37,6 +37,7 @@ public class EnemyCollider : MonoBehaviour
 
     public void AttackTargets(float _damage)
     {
+        Debug.Log("ATTACKED PLAYER");
         for(int i = 0;i<playersInRange.Count;i++)
         {
             playersInRange[i].GetComponent<PlayerStats>().Damage(_damage);

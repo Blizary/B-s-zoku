@@ -23,9 +23,10 @@ public class EnemyControler : MonoBehaviour
     private float currentHealth;
     private bool canMove;
     private bool closeToTarget;
-    private bool inAttackRange;
+    public bool inAttackRange;
     private Vector3 knockbackDir;
     private float innerAttackDelay;
+    private bool attacking;
 
     // Cached component references
     private Animator myAnimator;
@@ -75,8 +76,11 @@ public class EnemyControler : MonoBehaviour
                 }
                 else
                 {
-                    if(Mathf.Abs( transform.position.x - target.transform.position.x) >= attackRange)
-                    transform.position = Vector3.MoveTowards(transform.position, target.transform.position, (speed/2) * Time.deltaTime);
+                    if(Mathf.Abs( transform.position.x - target.transform.position.x) >= attackRange-0.2f)
+                    {
+                        transform.position = Vector3.MoveTowards(transform.position, target.transform.position, (speed / 2) * Time.deltaTime);
+                    }
+                    
                 }
             }
            
@@ -104,6 +108,7 @@ public class EnemyControler : MonoBehaviour
     /// </summary>
     void CheckAttackRange()
     {
+
         if (Vector3.Distance(transform.position, target.transform.position) <= attackRange)
         {
             inAttackRange = true;
@@ -112,7 +117,7 @@ public class EnemyControler : MonoBehaviour
         {
             inAttackRange = false;
         }
-       
+
     }
 
     /// <summary>
@@ -120,19 +125,23 @@ public class EnemyControler : MonoBehaviour
     /// </summary>
     void AttackPlayer()
     {
-        if (inAttackRange == true)//enemy is in range
+        if (!attacking)
         {
-            StartCoroutine(IEAttackPlayer());
+            if (inAttackRange == true)//enemy is in range
+            {
+                Debug.Log("close enough to attack");
+                StartCoroutine(IEAttackPlayer());
+            }
         }
     }
 
     IEnumerator IEAttackPlayer()
     {
         canMove = false;
-
+        attacking = true;
         yield return new WaitForSeconds(attackDelay);
         collisionBox.GetComponent<EnemyCollider>().AttackTargets(damage);
-
+        attacking = false;
         canMove = true;
     }
 
@@ -167,9 +176,13 @@ public class EnemyControler : MonoBehaviour
         //GetComponent<Rigidbody2D>().AddForce(moveDirection.normalized * -120f);
 
         currentHealth -= _damage;
+<<<<<<< HEAD
         Debug.Log("Enemy Was Hit for " + _damage + " - " + currentHealth + " health remaining.");
         GameObject floatingDamageNr = Instantiate(floatingDamageNumber, transform.position, Quaternion.identity);
         floatingDamageNr.transform.GetChild(0).GetComponent<TextMesh>().text = "-" + _damage;
+=======
+       // Debug.Log("Enemy Was Hit for " + _damage + " - " + currentHealth + " health remaining.");
+>>>>>>> d20faa33277af3a52f5345c39351933d47c00d26
         myAnimator.SetTrigger("EnemyWasHit");
     }
 
