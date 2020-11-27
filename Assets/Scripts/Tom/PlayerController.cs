@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public GameObject myAttackRange;
     BoxCollider2D myAttackRangeCollider;
     PlayerAttackController myPAC;
+    Animator myAnimator;
 
     /// COMBAT SYSTEM CODE
     /// This system is a first test for the player combat
@@ -26,6 +27,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] bool attack2WasPerformed = false;
     [SerializeField] float timeBetweenAttack1And2 = 0.5f;
     [SerializeField] float timeBetweenAttack2AndCombo = 3f;
+    [SerializeField] bool canDash = true;
 
 
     private void Start()
@@ -35,12 +37,23 @@ public class PlayerController : MonoBehaviour
         mySpriteRenderer = GetComponentInChildren<SpriteRenderer>();
         myAttackRangeCollider = myAttackRange.GetComponent<BoxCollider2D>();
         myPAC = myAttackRange.GetComponent<PlayerAttackController>();
+        myAnimator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         FlipSprite();
+
+
+        // Code for run animation
+        bool playerHasHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
+        bool playerHasVerticalSpeed = Mathf.Abs(myRigidbody.velocity.y) > Mathf.Epsilon;
+        if (playerHasHorizontalSpeed || playerHasVerticalSpeed)
+        {
+            myAnimator.SetBool("IsRunning", true);
+        }
+        else myAnimator.SetBool("IsRunning", false);
     }
 
     // Function to swap sprite direction based on look direction
@@ -103,7 +116,29 @@ public class PlayerController : MonoBehaviour
         if (context.performed && attack2WasPerformed)
         {
             myPAC.ExecuteCombo();
+            attack2WasPerformed = false; // else combo can be spammed. (blanket fix)
         }
+    }
+
+    public void OnDash(InputAction.CallbackContext context)
+    {
+        if (context.performed && canDash)
+        {
+            Debug.Log("Dash");
+            myAnimator.SetTrigger("Dash");
+
+            // Dash Code here
+
+            StartCoroutine(ResetDash());
+        }
+    }
+
+    IEnumerator ResetDash()
+    {
+        yield return new WaitForSeconds(3.0f);
+        GetComponent<BoxCollider2D>().isTrigger = false;
+       
+        canDash = true;
     }
 
     IEnumerator Attack1PerformedReset()
