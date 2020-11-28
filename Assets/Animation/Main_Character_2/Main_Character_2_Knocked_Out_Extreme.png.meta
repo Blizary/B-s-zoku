@@ -1,0 +1,302 @@
+fileFormatVersion: 2
+guid: effbece3e823d3343adcd09680d0731e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9100914573955854543
+    second: Main_Character_2_Knocked_Out_Extreme_0
+  - first:
+      213: 8689787725412667878
+    second: Main_Character_2_Knocked_Out_Extreme_1
+  - first:
+      213: 3842482009444983147
+    second: Main_Character_2_Knocked_Out_Extreme_2
+  - first:
+      213: -1219435830977227178
+    second: Main_Character_2_Knocked_Out_Extreme_3
+  - first:
+      213: 7575683541447730008
+    second: Main_Character_2_Knocked_Out_Extreme_4
+  - first:
+      213: 6492303587409858141
+    second: Main_Character_2_Knocked_Out_Extreme_5
+  - first:
+      213: 3018707669126036278
+    second: Main_Character_2_Knocked_Out_Extreme_6
+  - first:
+      213: 3346153081385965926
+    second: Main_Character_2_Knocked_Out_Extreme_7
+  - first:
+      213: -8573406850877980761
+    second: Main_Character_2_Knocked_Out_Extreme_8
+  - first:
+      213: 8268552217178381809
+    second: Main_Character_2_Knocked_Out_Extreme_9
+  - first:
+      213: -46460918713971256
+    second: Main_Character_2_Knocked_Out_Extreme_10
+  - first:
+      213: -1209128725751791190
+    second: Main_Character_2_Knocked_Out_Extreme_11
+  - first:
+      213: 6979908624647767848
+    second: Main_Character_2_Knocked_Out_Extreme_12
+  - first:
+      213: 8816044074434598507
+    second: Main_Character_2_Knocked_Out_Extreme_13
+  - first:
+      213: 155365263595606642
+    second: Main_Character_2_Knocked_Out_Extreme_14
+  - first:
+      213: 7576642095044857199
+    second: Main_Character_2_Knocked_Out_Extreme_15
+  - first:
+      213: -8455676205038581615
+    second: Main_Character_2_Knocked_Out_Extreme_16
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 651
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Main_Character_2_Knocked_Out_Extreme_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 31
+        width: 45
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc070d71691fc4e70800000000000000
+      internalID: 9100914573955854543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main_Character_2_Knocked_Out_Extreme_1
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 26
+        width: 68
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e195c255e3589870800000000000000
+      internalID: 8689787725412667878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main_Character_2_Knocked_Out_Extreme_2
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 26
+        width: 69
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b612ccc770d335530800000000000000
+      internalID: 3842482009444983147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main_Character_2_Knocked_Out_Extreme_3
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 25
+        width: 87
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65618349291b31fe0800000000000000
+      internalID: -1219435830977227178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main_Character_2_Knocked_Out_Extreme_6
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 25
+        width: 87
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b310b91aa94e920800000000000000
+      internalID: 3018707669126036278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main_Character_2_Knocked_Out_Extreme_15
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 32
+        width: 90
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6d8b69b7d3a52960800000000000000
+      internalID: 7576642095044857199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main_Character_2_Knocked_Out_Extreme_16
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 32
+        width: 90
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 198c3f6aa4767aa80800000000000000
+      internalID: -8455676205038581615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
