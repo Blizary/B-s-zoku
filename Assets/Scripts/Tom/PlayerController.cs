@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     Vector2 walkInput;
     [SerializeField] float movementSpeed = 5f;
+    public bool frozen = false;
 
     // Cached component references
     Rigidbody2D myRigidbody;
@@ -43,8 +44,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        FlipSprite();
+        if (frozen) return;
 
+        FlipSprite();
 
         // Code for run animation
         bool playerHasHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
@@ -77,7 +79,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        ApplyMovement();
+        if (!frozen) ApplyMovement();
     }
 
     public void OnWalk(InputAction.CallbackContext context)
@@ -93,7 +95,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnAttack1(InputAction.CallbackContext context)
     {
-        if (context.performed && !attack1WasPerformed)
+        if (context.performed && !attack1WasPerformed && !frozen)
         {
             myPAC.ExecuteAttack1();
             attack1WasPerformed = true;
@@ -103,7 +105,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnAttack2(InputAction.CallbackContext context)
     {
-        if (context.performed && attack1WasPerformed && !attack2WasPerformed)
+        if (context.performed && attack1WasPerformed && !attack2WasPerformed && !frozen)
         {
             myPAC.ExecuteAttack2();
             attack2WasPerformed = true;
@@ -113,7 +115,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnCombo(InputAction.CallbackContext context)
     {
-        if (context.performed && attack2WasPerformed)
+        if (context.performed && attack2WasPerformed && !frozen)
         {
             myPAC.ExecuteCombo();
             attack2WasPerformed = false; // else combo can be spammed. (blanket fix)
@@ -122,7 +124,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnDash(InputAction.CallbackContext context)
     {
-        if (context.performed && canDash)
+        if (context.performed && canDash && !frozen)
         {
             Debug.Log("Dash");
             myAnimator.SetTrigger("Dash");

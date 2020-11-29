@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class MainLevelManager : MonoBehaviour
 {
@@ -14,6 +16,7 @@ public class MainLevelManager : MonoBehaviour
     public GameObject conversationBlackBars;
     public GameObject blackScreen;
     public TextAnimatorPlayer blackScreenText;
+    public Text pausedText;
 
     public List<BsZokuEvent> levelEvents;
 
@@ -32,6 +35,8 @@ public class MainLevelManager : MonoBehaviour
 
     //blackScreen event variables
     private bool blackScreenOn;
+
+    private bool gamePaused = false;
 
     // Start is called before the first frame update
     void Start()
@@ -57,13 +62,23 @@ public class MainLevelManager : MonoBehaviour
             {
                 case BsZokuEvent.BsZokuEventType.BlackScreen:
                     //STOP PLAYER MOVEMENT HERE
+                    GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+                    foreach (GameObject p in players)
+                    {
+                        p.GetComponent<PlayerController>().frozen = true;
+                    }
                     blackScreenOn = true;
                     blackScreen.SetActive(true);
                     blackScreenText.ShowText(currentEvent.textToShow);
                     break;
                 case BsZokuEvent.BsZokuEventType.Conversation:
                     //STOP PLAYER MOVEMNT HERE
-                    if(currentEvent.conversation.cinematicView)
+                    GameObject[] gamers = GameObject.FindGameObjectsWithTag("Player");
+                    foreach (GameObject p in gamers)
+                    {
+                        p.GetComponent<PlayerController>().frozen = true;
+                    }
+                    if (currentEvent.conversation.cinematicView)
                     {
                         conversationBlackBars.SetActive(true);
                     }
@@ -196,6 +211,25 @@ public class MainLevelManager : MonoBehaviour
         SceneManager.LoadScene("1_MainGame");
     }
 
+    public void PauseGame(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            if (gamePaused)
+            {
+                Time.timeScale = 1f;
+                gamePaused = false;
+                pausedText.gameObject.SetActive(false);
+            }
+            else
+            {
+                Time.timeScale = 0f;
+                gamePaused = true;
+                pausedText.gameObject.SetActive(true);
+            }
+        } 
+    }
+
     public void DeathScreen()
     {
         instructionsUI.SetActive(false);
@@ -219,6 +253,11 @@ public class MainLevelManager : MonoBehaviour
         blackScreen.SetActive(false);
         blackScreenOn = false;
         //GIVE PLAYER CONTROLLS BACK
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject p in players)
+        {
+            p.GetComponent<PlayerController>().frozen = false;
+        }
         levelEvents.RemoveAt(0);
         Debug.Log("blackscreen event complete");
         UpdateEvent();
