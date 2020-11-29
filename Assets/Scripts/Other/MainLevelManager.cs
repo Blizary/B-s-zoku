@@ -17,6 +17,7 @@ public class MainLevelManager : MonoBehaviour
     public GameObject blackScreen;
     public TextAnimatorPlayer blackScreenText;
     public Text pausedText;
+    public GameObject background;
 
     public List<BsZokuEvent> levelEvents;
 
@@ -264,6 +265,10 @@ public class MainLevelManager : MonoBehaviour
         {
             p.GetComponent<PlayerController>().frozen = false;
         }
+        if(currentEvent.newBackground!=null)
+        {
+            background.GetComponent<SpriteRenderer>().sprite = currentEvent.newBackground;
+        }    
         levelEvents.RemoveAt(0);
         Debug.Log("blackscreen event complete");
         UpdateEvent();

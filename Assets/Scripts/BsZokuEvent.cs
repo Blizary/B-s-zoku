@@ -19,6 +19,7 @@ public class BsZokuEvent
     public BsZokuEventType type;
 
     [Header("FOR BLACKSCREEN")]
+    public Sprite newBackground;
     [TextArea(3, 50), SerializeField]
     public string textToShow = " ";
 
