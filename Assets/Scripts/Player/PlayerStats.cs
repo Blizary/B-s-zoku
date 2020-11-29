@@ -35,7 +35,9 @@ public class PlayerStats : MonoBehaviour
         {
             Debug.Log("Player died");
             manager.DeathScreen();
+            manager.SetLastEvent();
             Destroy(this.gameObject);
+            
 
         }
     }

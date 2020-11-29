@@ -38,11 +38,29 @@ public class MainLevelManager : MonoBehaviour
     private bool blackScreenOn;
 
     private bool gamePaused = false;
+    public int eventCounter;
 
     // Start is called before the first frame update
     void Start()
     {
         spawner = GameObject.FindGameObjectWithTag("Spawners");
+        if (PlayerPrefs.HasKey("LastWave"))
+        {
+            eventCounter = PlayerPrefs.GetInt("LastWave");
+            eventCounter -= 2;
+            for(int i=0;i< eventCounter; i++)
+            {
+                levelEvents.RemoveAt(0);
+               
+            }
+        }
+        else
+        {
+            Debug.Log("Non Existing key");
+            eventCounter = 0;
+        }
+
+
         UpdateEvent();
     }
 
@@ -91,6 +109,7 @@ public class MainLevelManager : MonoBehaviour
                     break;
 
             }
+            eventCounter += 1;
 
         }
         else
@@ -245,7 +264,7 @@ public class MainLevelManager : MonoBehaviour
     {
         instructionsUI.SetActive(false);
         deathUI.SetActive(true);
-        GameObject.Find("Timer").GetComponent<GameTimeManager>().StopTimer();
+       // GameObject.Find("Timer").GetComponent<GameTimeManager>().StopTimer();
         foreach (Transform child in GameObject.Find("SpawnerList").transform)
         {
             GameObject.Destroy(child.gameObject);
@@ -289,6 +308,12 @@ public class MainLevelManager : MonoBehaviour
 
         sentenceShown = false;
         currentEvent.conversation.sentences.RemoveAt(0);
+    }
+
+    public void SetLastEvent()
+    {
+        PlayerPrefs.SetInt("LastWave", eventCounter);
+        Debug.Log("KEY WAS SET");
     }
 
 }
