@@ -4829,83 +4829,110 @@ MonoBehaviour:
   pausedText: {fileID: 1919383494}
   background: {fileID: 546396598}
   levelEvents:
-  - name: Initial Screen
+  - name: Date (cutscene)
     type: 0
     newBackground: {fileID: 0}
-    textToShow: <waitfor=1>This is a great test about testing <shake> shaaaaaky </shake>
-      things and all sort of other <wave> cool </wave> things that we can totes do
-      here in this <rainb> space <waitfor=3>.
+    textToShow: <waitfor=1>November 18th, 1987<waitfor=3>.
     conversation:
       cinematicView: 0
       sentences: []
     waves: []
-  - name: Tutorial Lady
-    type: 1
+  - name: Time (cutscene)
+    type: 0
     newBackground: {fileID: 0}
-    textToShow: 
-    conversation:
-      cinematicView: 1
-      sentences:
-      - personSpeaking: Player
-        textToShow: Hi there this is a test<waitfor=3>.
-      - personSpeaking: Boyfriend
-        textToShow: i <shake> HATE </shake> tests<waitfor=3>.
-      - personSpeaking: Player
-        textToShow: There there, no need for that lets all be <rainb>friends<waitfor=3>.
-    waves:
-    - enemies:
-      - enemyType: {fileID: 1168432531503762176, guid: b190890923ce90b4282e21d8ffe9606b,
-          type: 3}
-        amount: 2
-      allAtOnce: 0
-    - enemies:
-      - enemyType: {fileID: 1168432531503762176, guid: b190890923ce90b4282e21d8ffe9606b,
-          type: 3}
-        amount: 2
-      - enemyType: {fileID: 2584876139761559136, guid: 6d2cc39fd3d4830498eb36af9efac0ac,
-          type: 3}
-        amount: 1
-      allAtOnce: 1
-    - enemies:
-      - enemyType: {fileID: 1168432531503762176, guid: b190890923ce90b4282e21d8ffe9606b,
-          type: 3}
-        amount: 5
-      allAtOnce: 0
-  - name: Tutorial Waves
-    type: 2
-    newBackground: {fileID: 0}
-    textToShow: 
+    textToShow: <waitfor=1>11:40 am<waitfor=3>.
     conversation:
       cinematicView: 0
-      sentences:
-      - personSpeaking: 
-        textToShow: Hi there this is a test
-      - personSpeaking: 
-        textToShow: i <shake> HATE <shake> test
-      - personSpeaking: 
-        textToShow: There there, no need for that lets all be <rainb>friends
-    waves:
-    - enemies:
-      - enemyType: {fileID: 1168432531503762176, guid: b190890923ce90b4282e21d8ffe9606b,
-          type: 3}
-        amount: 2
-      allAtOnce: 1
-    - enemies:
-      - enemyType: {fileID: 1168432531503762176, guid: b190890923ce90b4282e21d8ffe9606b,
-          type: 3}
-        amount: 3
-      - enemyType: {fileID: 2584876139761559136, guid: 6d2cc39fd3d4830498eb36af9efac0ac,
-          type: 3}
-        amount: 1
-      allAtOnce: 0
-    - enemies:
-      - enemyType: {fileID: 1168432531503762176, guid: b190890923ce90b4282e21d8ffe9606b,
-          type: 3}
-        amount: 5
-      - enemyType: {fileID: 2584876139761559136, guid: 6d2cc39fd3d4830498eb36af9efac0ac,
-          type: 3}
-        amount: 1
-      allAtOnce: 0
+      sentences: []
+    waves: []
+  - name: Place (cutscene)
+    type: 0
+    newBackground: {fileID: 0}
+    textToShow: <waitfor=1>Shinjuku, Tokyo<waitfor=3>.
+    conversation:
+      cinematicView: 0
+      sentences: []
+    waves: []
+  - name: Vagabonds (cutscene
+    type: 0
+    newBackground: {fileID: 0}
+    textToShow: <waitfor=1>Earlier this year, the vagabonds from the <color=blue>Keitosuru</color>
+      gang tormented the city with reckless <color=red>crime</color><waitfor=4>.
+    conversation:
+      cinematicView: 0
+      sentences: []
+    waves: []
+  - name: Looting (cutscene)
+    type: 0
+    newBackground: {fileID: 0}
+    textToShow: <waitfor=1>Not a week has passed without them destroying and looting
+      anything they can find<waitfor=4>.
+    conversation:
+      cinematicView: 0
+      sentences: []
+    waves: []
+  - name: Delinquent (cutscene)
+    type: 0
+    newBackground: {fileID: 0}
+    textToShow: <waitfor=1>The girls involved with the <color=blue>Keitosuru</color>
+      gang managed to break away from the <color=red>shackles of these delinquent
+      men</color><waitfor=4>.
+    conversation:
+      cinematicView: 0
+      sentences: []
+    waves: []
+  - name: Revenge (cutscene)
+    type: 0
+    newBackground: {fileID: 0}
+    textToShow: <waitfor=1>They founded their own, the <color=purple>Zokugai</color>.
+      Fueled with anger against the iniquity of the <color=blue>Keitosuru</color>,
+      they seek to gather new recruits to take revenge upon them<waitfor=4>.
+    conversation:
+      cinematicView: 0
+      sentences: []
+    waves: []
+  - name: Trouble (cutscene)
+    type: 0
+    newBackground: {fileID: 0}
+    textToShow: <waitfor=1>Blissfully unaware, <color=purple>Mikazuki</color> and
+      <color=purple>Amaya</color> are on their way back from high school, where <color=red><bounce>trouble
+      is just around the corner...</><waitfor=4>.
+    conversation:
+      cinematicView: 0
+      sentences: []
+    waves: []
+  - name: Ow 1 (cutscene)
+    type: 0
+    newBackground: {fileID: 0}
+    textToShow: <waitfor=1><shake><b><color=red>OW!</><waitfor=1>.
+    conversation:
+      cinematicView: 0
+      sentences: []
+    waves: []
+  - name: Ow 2 (cutscene)
+    type: 0
+    newBackground: {fileID: 0}
+    textToShow: <waitfor=1><shake><b><color=red>OWW!</><waitfor=1>.
+    conversation:
+      cinematicView: 0
+      sentences: []
+    waves: []
+  - name: Ow 3 (cutscene)
+    type: 0
+    newBackground: {fileID: 0}
+    textToShow: <waitfor=1><shake><b><color=red>OWWWWW!!</><waitfor=1>.
+    conversation:
+      cinematicView: 0
+      sentences: []
+    waves: []
+  - name: Argh (cutscene)
+    type: 0
+    newBackground: {fileID: 0}
+    textToShow: <waitfor=1><shake><b><color=red>ARGGHHHHH!!!!!!!</><waitfor=1>.
+    conversation:
+      cinematicView: 0
+      sentences: []
+    waves: []
 --- !u!4 &1927522426
 Transform:
   m_ObjectHideFlags: 0
