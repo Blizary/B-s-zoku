@@ -200,6 +200,12 @@ public class MainLevelManager : MonoBehaviour
                 sentenceShown = false;
                 conversationOn = false;
                 conversationBlackBars.SetActive(false);
+                //GIVE PLAYER CONTROLLS BACK
+                GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+                foreach (GameObject p in players)
+                {
+                    p.GetComponent<PlayerController>().frozen = false;
+                }
                 Debug.Log("conversation event complete");
                 UpdateEvent();
             }

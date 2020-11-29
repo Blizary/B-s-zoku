@@ -775,7 +775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bedf7c180df511142bf3e548bc55e950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnTimer: 7
+  respawnTimer: 2.5
   enemyPrefab: {fileID: 1168432531503762176, guid: b190890923ce90b4282e21d8ffe9606b,
     type: 3}
   timedSpawn: 0
@@ -1068,7 +1068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bedf7c180df511142bf3e548bc55e950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnTimer: 4
+  respawnTimer: 2.5
   enemyPrefab: {fileID: 1168432531503762176, guid: b190890923ce90b4282e21d8ffe9606b,
     type: 3}
   timedSpawn: 0
@@ -1986,7 +1986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bedf7c180df511142bf3e548bc55e950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnTimer: 7
+  respawnTimer: 2.5
   enemyPrefab: {fileID: 1168432531503762176, guid: b190890923ce90b4282e21d8ffe9606b,
     type: 3}
   timedSpawn: 0
@@ -2220,7 +2220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bedf7c180df511142bf3e548bc55e950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnTimer: 9
+  respawnTimer: 2.5
   enemyPrefab: {fileID: 1168432531503762176, guid: b190890923ce90b4282e21d8ffe9606b,
     type: 3}
   timedSpawn: 0
@@ -2711,7 +2711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bedf7c180df511142bf3e548bc55e950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnTimer: 9
+  respawnTimer: 2.5
   enemyPrefab: {fileID: 1168432531503762176, guid: b190890923ce90b4282e21d8ffe9606b,
     type: 3}
   timedSpawn: 0
@@ -3930,7 +3930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bedf7c180df511142bf3e548bc55e950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnTimer: 4
+  respawnTimer: 2.5
   enemyPrefab: {fileID: 1168432531503762176, guid: b190890923ce90b4282e21d8ffe9606b,
     type: 3}
   timedSpawn: 0
@@ -4986,11 +4986,23 @@ MonoBehaviour:
     - enemies:
       - enemyType: {fileID: 1168432531503762176, guid: b190890923ce90b4282e21d8ffe9606b,
           type: 3}
-        amount: 0
+        amount: 2
+      allAtOnce: 1
+    - enemies:
+      - enemyType: {fileID: 1168432531503762176, guid: b190890923ce90b4282e21d8ffe9606b,
+          type: 3}
+        amount: 3
+      - enemyType: {fileID: 2584876139761559136, guid: 6d2cc39fd3d4830498eb36af9efac0ac,
+          type: 3}
+        amount: 1
       allAtOnce: 0
-    - enemies: []
-      allAtOnce: 0
-    - enemies: []
+    - enemies:
+      - enemyType: {fileID: 1168432531503762176, guid: b190890923ce90b4282e21d8ffe9606b,
+          type: 3}
+        amount: 5
+      - enemyType: {fileID: 2584876139761559136, guid: 6d2cc39fd3d4830498eb36af9efac0ac,
+          type: 3}
+        amount: 1
       allAtOnce: 0
 --- !u!4 &1927522426
 Transform:
