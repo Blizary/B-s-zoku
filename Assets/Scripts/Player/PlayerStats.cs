@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
 
     public float health;
+    public Slider healthSlider;
 
 
     private float maxhealth;
@@ -26,7 +28,8 @@ public class PlayerStats : MonoBehaviour
     public void Damage(float damage)
     {
         health -= damage;
-       // Debug.Log("player took damage");
+        Debug.Log("player took " + damage + " damage");
+        healthSlider.GetComponent<Slider>().value = health;
     }
 
     void Death()
