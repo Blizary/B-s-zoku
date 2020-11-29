@@ -37,7 +37,7 @@ public class EnemyCollider : MonoBehaviour
 
     public void AttackTargets(float _damage)
     {
-        Debug.Log("ATTACKED PLAYER");
+       // Debug.Log("ATTACKED PLAYER");
         for(int i = 0;i<playersInRange.Count;i++)
         {
             playersInRange[i].GetComponent<PlayerStats>().Damage(_damage);

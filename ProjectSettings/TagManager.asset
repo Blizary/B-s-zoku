@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Enemy
   - Manager
+  - Spawners
+  - Mother
+  - Tutorial
+  - Other
+  - Boyfriend
   layers:
   - Default
   - TransparentFX

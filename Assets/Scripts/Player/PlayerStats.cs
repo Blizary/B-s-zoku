@@ -26,7 +26,7 @@ public class PlayerStats : MonoBehaviour
     public void Damage(float damage)
     {
         health -= damage;
-        Debug.Log("player took damage");
+       // Debug.Log("player took damage");
     }
 
     void Death()

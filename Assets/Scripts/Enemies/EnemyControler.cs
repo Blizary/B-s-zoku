@@ -33,12 +33,14 @@ public class EnemyControler : MonoBehaviour
     // Cached component references
     private Animator myAnimator;
     private Rigidbody2D rb;
+    private MainLevelManager manager;
  
 
     // Start is called before the first frame update
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player");//needs replacement in the future to acomodate 2 players
+        manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<MainLevelManager>();
         currentHealth = health;
         canMove = true;
 
@@ -131,7 +133,7 @@ public class EnemyControler : MonoBehaviour
         {
             if (inAttackRange == true)//enemy is in range
             {
-                Debug.Log("close enough to attack");
+               // Debug.Log("close enough to attack");
                 StartCoroutine(IEAttackPlayer());
             }
         }
@@ -165,6 +167,7 @@ public class EnemyControler : MonoBehaviour
         //QUEU ANIMATIONS AND PRATICLES HERE
         yield return new WaitForSeconds(0.0f);
         Instantiate(explosionPS, transform.position, Quaternion.identity);
+        manager.UpdateEnemiesKilled();
         Destroy(this.gameObject);
 
     }

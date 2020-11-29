@@ -6,19 +6,27 @@ public class EnemySpawner : MonoBehaviour
 {
     public float respawnTimer;
     public GameObject enemyPrefab;
+    public bool timedSpawn;
 
     private float irespawnTimer;
+    public int numToSpawn;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        timedSpawn = false;
         irespawnTimer = respawnTimer;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Spawner();
+        if(timedSpawn && numToSpawn>0)
+        {
+            Spawner();
+        }
+       
     }
 
 
@@ -30,6 +38,7 @@ public class EnemySpawner : MonoBehaviour
             //spawn mob
             GameObject newMob = Instantiate(enemyPrefab, this.transform.position, Quaternion.identity, this.transform);
             DifficulyOverTime();
+            numToSpawn -= 1;
             //Debug.Log("spawning");
 
         }
@@ -47,5 +56,18 @@ public class EnemySpawner : MonoBehaviour
         }
         
 
+    }
+
+    public void Spawn(GameObject enemy)
+    {
+        timedSpawn = false;
+        GameObject newMob = Instantiate(enemy, this.transform.position, Quaternion.identity, this.transform);
+    }
+
+    public void UpdateEnemy(GameObject enemy,int num)
+    {
+        enemyPrefab = enemy;
+        numToSpawn = num;
+        timedSpawn = true;
     }
 }
