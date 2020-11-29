@@ -191,6 +191,10 @@ public class MainLevelManager : MonoBehaviour
                             enemyText = GameObject.FindGameObjectWithTag("Tutorial");
                             enemyText.GetComponent<TextLocations>().DisplayText(currentEvent.conversation.sentences[0].textToShow);
                             break;
+                        case "Other":
+                            enemyText = GameObject.FindGameObjectWithTag("Other");
+                            enemyText.GetComponent<TextLocations>().DisplayText(currentEvent.conversation.sentences[0].textToShow);
+                            break;
                     }
                     sentenceShown = true;
                 }
