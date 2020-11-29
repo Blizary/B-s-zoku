@@ -84,7 +84,7 @@ public class MainLevelManager : MonoBehaviour
                     GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
                     foreach (GameObject p in players)
                     {
-                        p.GetComponent<PlayerController>().frozen = true;
+                        p.GetComponent<PlayerController>().SetFreezeState(true);
                     }
                     blackScreenOn = true;
                     blackScreen.SetActive(true);
@@ -95,7 +95,7 @@ public class MainLevelManager : MonoBehaviour
                     GameObject[] gamers = GameObject.FindGameObjectsWithTag("Player");
                     foreach (GameObject p in gamers)
                     {
-                        p.GetComponent<PlayerController>().frozen = true;
+                        p.GetComponent<PlayerController>().SetFreezeState(true);
                     }
                     if (currentEvent.conversation.cinematicView)
                     {
@@ -228,7 +228,7 @@ public class MainLevelManager : MonoBehaviour
                 GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
                 foreach (GameObject p in players)
                 {
-                    p.GetComponent<PlayerController>().frozen = false;
+                    p.GetComponent<PlayerController>().SetFreezeState(false);
                 }
                 Debug.Log("conversation event complete");
                 UpdateEvent();

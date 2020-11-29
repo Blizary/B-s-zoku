@@ -44,10 +44,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (frozen) return;
-
-        FlipSprite();
-
         // Code for run animation
         bool playerHasHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
         bool playerHasVerticalSpeed = Mathf.Abs(myRigidbody.velocity.y) > Mathf.Epsilon;
@@ -56,6 +52,10 @@ public class PlayerController : MonoBehaviour
             myAnimator.SetBool("IsRunning", true);
         }
         else myAnimator.SetBool("IsRunning", false);
+
+        if (frozen) return;
+
+        FlipSprite();
     }
 
     // Function to swap sprite direction based on look direction
@@ -154,5 +154,13 @@ public class PlayerController : MonoBehaviour
         attack2WasPerformed = false;
     }
 
-    
+    public void SetFreezeState(bool state)
+    {
+        frozen = state;
+
+        if (frozen)
+        {
+            myRigidbody.velocity = new Vector2(0,0);
+        }
+    }
 }
