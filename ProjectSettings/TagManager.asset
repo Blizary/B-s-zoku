@@ -12,6 +12,8 @@ TagManager:
   - Other
   - Boyfriend
   - SoundEffects
+  - Boss1Ancor
+  - BoyAncor
   layers:
   - Default
   - TransparentFX

@@ -26,6 +26,13 @@ public class MainLevelManager : MonoBehaviour
 
     public List<BsZokuEvent> levelEvents;
 
+    [Header("Prefabs")]
+    public GameObject gangstaPoint;
+    public GameObject gangstaBoss;
+    public GameObject boyfriendPoint;
+    public GameObject boyfriendBoss;
+
+
     private GameObject spawner;
     private BsZokuEvent currentEvent;
 
@@ -45,6 +52,11 @@ public class MainLevelManager : MonoBehaviour
     private bool gamePaused = false;
     public int eventCounter;
 
+    private void Awake()
+    {
+        Debug.Log("manager awake");
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,16 +69,17 @@ public class MainLevelManager : MonoBehaviour
                 eventCounter -= 2;
             }
 
-            if (TESTEVENT != 0)
+            if( TESTEVENT!=0)
             {
                 eventCounter = TESTEVENT-1;
             }
-
             for (int i=0;i< eventCounter; i++)
             {
                 levelEvents.RemoveAt(0);
                
             }
+            Debug.Log("key found");
+            Debug.Log("num of events in store: " + levelEvents.Count);
         }
         else
         {
@@ -81,8 +94,8 @@ public class MainLevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        WaveController();
-        ConversationController();
+       //WaveController();
+       //ConversationController();
     }
 
 
@@ -96,19 +109,23 @@ public class MainLevelManager : MonoBehaviour
                 audioPlayer.clip = currentEvent.newMusic;
                 audioPlayer.Play();
             }
-
+            
             switch (currentEvent.type)
             {
                 case BsZokuEvent.BsZokuEventType.BlackScreen:
                     //STOP PLAYER MOVEMENT HERE
                     //Stop the audio
                     audioPlayer.Stop();
+                    
+                    /*
                     GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
 
                     foreach (GameObject p in players)
                     {
                         p.GetComponent<PlayerController>().SetFreezeState(true);
                     }
+                    */
+                    
                     blackScreenOn = true;
                     blackScreen.SetActive(true);
                     blackScreenText.ShowText(currentEvent.textToShow);
@@ -133,6 +150,7 @@ public class MainLevelManager : MonoBehaviour
                     break;
 
             }
+            
             eventCounter += 1;
 
         }
@@ -182,8 +200,6 @@ public class MainLevelManager : MonoBehaviour
 
                     }
                     enemiesSpawned = true;
-                    Debug.Log("spawned enemies for this wave");
-                    Debug.Log("current enemies on this wave: " + enemiesInWave);
                 }
                 else
                 {
@@ -192,7 +208,6 @@ public class MainLevelManager : MonoBehaviour
                         currentEvent.waves.RemoveAt(0);
                         enemiesKilledInWave = 0;
                         enemiesSpawned = false;
-                        Debug.Log("all enemies killed for this wave");
                     }
                 }
                 
@@ -229,8 +244,18 @@ public class MainLevelManager : MonoBehaviour
                             playerText.ShowText(currentEvent.conversation.sentences[0].textToShow);
                             break;
                         case "Boyfriend":
-                            enemyText = GameObject.FindGameObjectWithTag("Boyfriend");
-                            enemyText.GetComponent<TextLocations>().DisplayText(currentEvent.conversation.sentences[0].textToShow);
+                            if (GameObject.FindGameObjectWithTag("Boyfriend"))
+                            {
+                                enemyText = GameObject.FindGameObjectWithTag("Boyfriend");
+                                enemyText.GetComponent<TextLocations>().DisplayText(currentEvent.conversation.sentences[0].textToShow);
+                            }
+                            else
+                            {
+                                GameObject newGangsta = Instantiate(boyfriendBoss, boyfriendPoint.transform);
+                                enemyText = GameObject.FindGameObjectWithTag("Boyfriend");
+                                enemyText.GetComponent<TextLocations>().DisplayText(currentEvent.conversation.sentences[0].textToShow);
+                            }
+
                             break;
                         case "Mother":
                             enemyText = GameObject.FindGameObjectWithTag("Mother");
@@ -241,8 +266,20 @@ public class MainLevelManager : MonoBehaviour
                             enemyText.GetComponent<TextLocations>().DisplayText(currentEvent.conversation.sentences[0].textToShow);
                             break;
                         case "Other":
-                            enemyText = GameObject.FindGameObjectWithTag("Other");
-                            enemyText.GetComponent<TextLocations>().DisplayText(currentEvent.conversation.sentences[0].textToShow);
+                            if (GameObject.FindGameObjectWithTag("Other"))
+                            {
+                                enemyText = GameObject.FindGameObjectWithTag("Other");
+                                enemyText.GetComponent<TextLocations>().DisplayText(currentEvent.conversation.sentences[0].textToShow);
+                            }
+                            else
+                            {
+                                GameObject newGangsta = Instantiate(gangstaBoss, gangstaPoint.transform);
+                                enemyText = GameObject.FindGameObjectWithTag("Other");
+                                enemyText.GetComponent<TextLocations>().DisplayText(currentEvent.conversation.sentences[0].textToShow);
+                                Debug.Log("thingy");
+                            }
+                            
+                            
                             break;
                     }
                     sentenceShown = true;

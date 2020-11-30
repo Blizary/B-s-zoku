@@ -12,6 +12,7 @@ public class EnemyControler : MonoBehaviour
     public float minDistanceToTarget;
     public float attackRange;
     public float attackDelay;
+    public bool interactable;
 
 
     [Header("References")]
@@ -208,7 +209,9 @@ public class EnemyControler : MonoBehaviour
    
         yield return new WaitForSeconds(1f);
         manager.UpdateEnemiesKilled();
+
         Destroy(this.gameObject);
+        
 
     }
 

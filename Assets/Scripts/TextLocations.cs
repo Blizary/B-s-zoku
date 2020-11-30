@@ -15,7 +15,7 @@ public class TextLocations : MonoBehaviour
 
     void Start()
     {
-        GameObject.FindGameObjectWithTag("Manager").GetComponent<MainLevelManager>();
+        manager=GameObject.FindGameObjectWithTag("Manager").GetComponent<MainLevelManager>();
     }
 
 

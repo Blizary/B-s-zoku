@@ -212,7 +212,7 @@ PrefabInstance:
     - target: {fileID: 4611379442178722004, guid: 909e20da1d60d7a4595191a2c7661e71,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 20
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4611379442178722007, guid: 909e20da1d60d7a4595191a2c7661e71,
         type: 3}
@@ -227,12 +227,12 @@ PrefabInstance:
     - target: {fileID: 4611379442880783104, guid: 909e20da1d60d7a4595191a2c7661e71,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.12
+      value: -6.62
       objectReference: {fileID: 0}
     - target: {fileID: 4611379442880783104, guid: 909e20da1d60d7a4595191a2c7661e71,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.35
+      value: -0.14
       objectReference: {fileID: 0}
     - target: {fileID: 4611379442880783104, guid: 909e20da1d60d7a4595191a2c7661e71,
         type: 3}
@@ -744,7 +744,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 162706810}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.12, y: 1.3820504, z: -10}
+  m_LocalPosition: {x: -6.62, y: 1.5920504, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1370,7 +1370,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -20, y: 164}
+  m_AnchoredPosition: {x: -20, y: 254}
   m_SizeDelta: {x: 996.6208, y: 78.69263}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &415329875
@@ -2038,7 +2038,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 1000
+  m_SortingOrder: 15
   m_TargetDisplay: 0
 --- !u!224 &507743307
 RectTransform:
@@ -2689,6 +2689,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &970049322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 970049323}
+  m_Layer: 0
+  m_Name: BoyFriendPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &970049323
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970049322}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21.15, y: -0.25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1152676763}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1008067487
 GameObject:
   m_ObjectHideFlags: 0
@@ -2800,7 +2830,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1829102828}
+  - {fileID: 970049323}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3173,7 +3205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533441704}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.12, y: 1.3820504, z: -10}
+  m_LocalPosition: {x: -6.62, y: 1.5920504, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 31709383}
@@ -3473,7 +3505,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -20, y: -202}
+  m_AnchoredPosition: {x: -20, y: -252}
   m_SizeDelta: {x: 996.6208, y: 53.654083}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1717680937
@@ -3550,6 +3582,36 @@ RectTransform:
   m_AnchoredPosition: {x: -20, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1829102827
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1829102828}
+  m_Layer: 0
+  m_Name: GangBossPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1829102828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829102827}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.99, y: 0.17, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1152676763}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1915129475
 GameObject:
   m_ObjectHideFlags: 0
@@ -3832,6 +3894,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1927522426}
   - component: {fileID: 1927522425}
+  - component: {fileID: 1927522427}
   m_Layer: 0
   m_Name: _Manager
   m_TagString: Manager
@@ -3851,7 +3914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd38dbfbcb4b0a84e956f23a4ad03c3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TESTEVENT: 1
+  TESTEVENT: 10
   audioPlayer: {fileID: 162706815}
   instructionsUI: {fileID: 53617478}
   deathUI: {fileID: 2075712546}
@@ -4109,8 +4172,7 @@ MonoBehaviour:
       cinematicView: 0
       sentences:
       - personSpeaking: Tutorial
-        textToShow: <waitfor=1>Babygirl, <bounce>press RT to dash em'. For PC, press
-          Space</bounce><waitfor=4>.
+        textToShow: <waitfor=1>...<waitfor=2>.
       - personSpeaking: Tutorial
         textToShow: <waitfor=1>You're on your own now girl, go kick those guys asses
           into the 90's. All the best babygirl!<waitfor=3>
@@ -4235,7 +4297,7 @@ MonoBehaviour:
       allAtOnce: 0
   - name: After defeat gangsta convo (conversation)
     newMusic: {fileID: 0}
-    type: 2
+    type: 1
     newBackground: {fileID: 0}
     textToShow: 
     conversation:
@@ -4634,6 +4696,12 @@ MonoBehaviour:
       cinematicView: 0
       sentences: []
     waves: []
+  gangstaPoint: {fileID: 1829102827}
+  gangstaBoss: {fileID: 2494575139155977490, guid: df00b767d1a81d2468313e96df1b7f8e,
+    type: 3}
+  boyfriendPoint: {fileID: 970049322}
+  boyfriendBoss: {fileID: 6557895864597761746, guid: 780c752591724aa48811e7ab574ecbcf,
+    type: 3}
   eventCounter: 0
 --- !u!4 &1927522426
 Transform:
@@ -4650,6 +4718,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1927522427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927522424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96c5c2fcd15c1c842af64ba49a082623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1993944304
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ public class LevelManager : MonoBehaviour
 {
 
     // Stuff to hide/show with the information button
-    [SerializeField] private Text _information;
+    [SerializeField] private GameObject _information;
 
     public void StartGame()
     {
@@ -25,6 +25,6 @@ public class LevelManager : MonoBehaviour
     public void ShowInformation()
     {
         // Show Information Stuff
-        _information.gameObject.SetActive(!_information.gameObject.activeSelf);
+        _information.SetActive(!_information.gameObject.activeSelf);
     }
 }
