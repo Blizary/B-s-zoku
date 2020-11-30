@@ -469,8 +469,8 @@ MonoBehaviour:
   speed: 4
   health: 10
   damage: 10
-  minDistanceToTarget: 3
-  attackRange: 1
+  minDistanceToTarget: 7
+  attackRange: 2.5
   attackDelay: 1
   target: {fileID: 0}
   explosionPS: {fileID: 2463850850944966638, guid: b47efc5506be6e24dae85a5557cbc1e5,

@@ -9,6 +9,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float movementSpeed = 5f;
     public bool frozen = false;
 
+    public AudioClip normalPunchSound;
+    public AudioClip otherPunchSound;
+    public AudioClip comboSound;
+    public AudioClip damageSound;
+    public AudioSource soundEffectsMaker;
+
+
     // Cached component references
     Rigidbody2D myRigidbody;
     SpriteRenderer mySpriteRenderer;
@@ -163,6 +170,7 @@ public class PlayerController : MonoBehaviour
             attack1WasPerformed = true;
             StartCoroutine(Attack1PerformedReset());
             myAnimator.SetTrigger("Attack1");
+            soundEffectsMaker.PlayOneShot(normalPunchSound);
         }
     }
 
@@ -174,6 +182,7 @@ public class PlayerController : MonoBehaviour
             attack2WasPerformed = true;
             StartCoroutine(Attack2PerformedReset());
             myAnimator.SetTrigger("Attack2");
+            soundEffectsMaker.PlayOneShot(otherPunchSound);
         }
     }
 
@@ -184,6 +193,7 @@ public class PlayerController : MonoBehaviour
             myPAC.ExecuteCombo();
             attack2WasPerformed = false; // else combo can be spammed. (blanket fix)
             myAnimator.SetTrigger("Combo");
+            soundEffectsMaker.PlayOneShot(comboSound);
         }
     }
 

@@ -199,13 +199,19 @@ public class MainLevelManager : MonoBehaviour
             }
             else // all enemies of this event are killed
             {
-                levelEvents.RemoveAt(0);
                 wavesOn = false;
-                Debug.Log("wave event complete");
-                UpdateEvent();
+                StartCoroutine(WaitAfterAllKilled());
             }
 
         }
+    }
+
+    IEnumerator WaitAfterAllKilled()
+    {
+        yield return new WaitForSeconds(1);
+        levelEvents.RemoveAt(0);
+        Debug.Log("wave event complete");
+        UpdateEvent();
     }
 
     void ConversationController()

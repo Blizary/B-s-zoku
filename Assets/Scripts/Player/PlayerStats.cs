@@ -12,6 +12,8 @@ public class PlayerStats : MonoBehaviour
 
     private float maxhealth;
     private MainLevelManager manager;
+
+    private bool deathTrigger;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,18 +32,29 @@ public class PlayerStats : MonoBehaviour
         health -= damage;
         Debug.Log("player took " + damage + " damage");
         healthSlider.GetComponent<Slider>().value = health;
+
     }
 
     void Death()
     {
-        if(health<=0)
+        if(!deathTrigger)
         {
-            Debug.Log("Player died");
-            manager.DeathScreen();
-            manager.SetLastEvent();
-            Destroy(this.gameObject);
-            
-
+            if (health <= 0)
+            {
+                Debug.Log("Player died");
+                deathTrigger = true;
+                manager.SetLastEvent();
+                GetComponentInChildren<Animator>().SetTrigger("Death");
+                StartCoroutine(DeathIE());
+            }
         }
+     
+    }
+
+    IEnumerator DeathIE()
+    {
+        yield return new WaitForSeconds(1);
+        manager.DeathScreen();
+        Destroy(this.gameObject);
     }
 }
