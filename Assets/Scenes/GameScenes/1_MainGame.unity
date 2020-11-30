@@ -3699,7 +3699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd38dbfbcb4b0a84e956f23a4ad03c3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TESTEVENT: 10
+  TESTEVENT: 1
   audioPlayer: {fileID: 162706815}
   instructionsUI: {fileID: 53617478}
   deathUI: {fileID: 2075712546}
@@ -3745,7 +3745,7 @@ MonoBehaviour:
     newMusic: {fileID: 0}
     type: 0
     newBackground: {fileID: 0}
-    textToShow: <waitfor=1>Earlier this year, the vagabonds from the <color=blue>Keitosuru</color>
+    textToShow: <waitfor=1>Earlier this year, the vagabonds from the <color=green>Keitosuru</color>
       gang tormented the city with reckless <color=red>crime</color><waitfor=4>.
     conversation:
       cinematicView: 0
@@ -3765,7 +3765,7 @@ MonoBehaviour:
     newMusic: {fileID: 0}
     type: 0
     newBackground: {fileID: 0}
-    textToShow: <waitfor=1>The girls involved with the <color=blue>Keitosuru</color>
+    textToShow: <waitfor=1>The girls involved with the <color=green>Keitosuru</color>
       gang managed to break away from the <color=red>shackles of these delinquent
       men</color><waitfor=4>.
     conversation:
@@ -3777,7 +3777,7 @@ MonoBehaviour:
     type: 0
     newBackground: {fileID: 0}
     textToShow: <waitfor=1>They founded their own, the <color=purple>Zokugai</color>.
-      Fueled with anger against the iniquity of the <color=blue>Keitosuru</color>,
+      Fueled with anger against the iniquity of the <color=green>Keitosuru</color>,
       they seek to gather new recruits to take revenge upon them<waitfor=4>.
     conversation:
       cinematicView: 0
@@ -3856,7 +3856,7 @@ MonoBehaviour:
           In the <color=red><shake>MIDDLE</> of the day.  And he took my money. Not
           that I had much mind you. But that's besides the point<waitfor=2>.
       - personSpeaking: Player
-        textToShow: <waitfor=1>Was <color=blue>Natsuki</color> with the <color=blue>Zokugai</color>
+        textToShow: <waitfor=1>Was <color=green>Natsuki</color> with the <color=green>Keitosuru</color>
           when I was with him?!<waitfor=2>.
       - personSpeaking: Player
         textToShow: <waitfor=1>He's a loser. He always thought they were so cool.
@@ -3878,8 +3878,8 @@ MonoBehaviour:
         textToShow: <waitfor=1>Use the left Joystick or D-Pad to move. For PC, use
           WASD for Player 1 and Arrow Keys for Player 2<waitfor=4>.
       - personSpeaking: Tutorial
-        textToShow: <waitfor=1><b><color=green>Press A to attack!</><b>For PC, press
-          Q!</b><waitfor=4>.
+        textToShow: <waitfor=1><b><color=green>Press A to attack!</color><b>For PC,
+          press Q!</b><waitfor=4>.
     waves: []
   - name: Wave 1 (wave)
     newMusic: {fileID: 0}
@@ -3904,9 +3904,9 @@ MonoBehaviour:
       cinematicView: 0
       sentences:
       - personSpeaking: Tutorial
-        textToShow: <waitfor=1>I know you got it in you! <b><color=red>Press B to
-          follow up</> after <color=green><b>attacking with A!</> <b>For PC, press
-          E after attacking with Q!</><waitfor=4>.
+        textToShow: <waitfor=1>I know you got it in you! <color=red>Press B to follow
+          up</color after <color=green>attacking with A!</color> <b>For PC, press
+          E after attacking with Q!</b><waitfor=4>.
     waves: []
   - name: Wave 2 (wave)
     newMusic: {fileID: 0}
@@ -3931,8 +3931,8 @@ MonoBehaviour:
       cinematicView: 0
       sentences:
       - personSpeaking: Tutorial
-        textToShow: <waitfor=1><color=yellow><b>Press Y to Combo.</> <b>For PC press
-          R.</b> Hit those idiots with a <b><bounce>sucker punch!</><waitfor=4>.
+        textToShow: <waitfor=1><color=yellow>Press Y to Combo.</color> <b>For PC
+          press R.</b> Hit those idiots with a <bounce>sucker punch!</bounce><waitfor=4>.
     waves: []
   - name: Wave 3 (wave)
     newMusic: {fileID: 0}
@@ -3957,8 +3957,8 @@ MonoBehaviour:
       cinematicView: 0
       sentences:
       - personSpeaking: Tutorial
-        textToShow: <waitfor=1>Babygirl, <bounce><b>press RT to dash em'. For PC,
-          press Space</><waitfor=4>.
+        textToShow: <waitfor=1>Babygirl, <bounce>press RT to dash em'. For PC, press
+          Space</bounce><waitfor=4>.
       - personSpeaking: Tutorial
         textToShow: <waitfor=1>You're on your own now girl, go kick those guys asses
           into the 90's. All the best babygirl!<waitfor=3>
@@ -3986,7 +3986,7 @@ MonoBehaviour:
     newMusic: {fileID: 0}
     type: 0
     newBackground: {fileID: 966768986}
-    textToShow: <waitfor=1>I can't believe I ever let that <color=blue><bounce>joke
+    textToShow: <waitfor=1>I can't believe I ever let that <color=green><bounce>joke
       of a man date me</><waitfor=4>.
     conversation:
       cinematicView: 0
@@ -3996,7 +3996,7 @@ MonoBehaviour:
     newMusic: {fileID: 0}
     type: 0
     newBackground: {fileID: 0}
-    textToShow: <waitfor=1><bounce>I gotta take him down,</bounce> <color=blue>and
+    textToShow: <waitfor=1><bounce>I gotta take him down,</bounce> <color=green>and
       all his phony crew too.</color><waitfor=4>.
     conversation:
       cinematicView: 0
@@ -4057,7 +4057,7 @@ MonoBehaviour:
       - personSpeaking: Other
         textToShow: <waitfor=1>I guess you knew we were <color=red>coming for you</color><waitfor=2>.
       - personSpeaking: Other
-        textToShow: <waitfor=1><color=pink><bounce>Two cute, cute girls</><waitfor=2>.
+        textToShow: <waitfor=1><color=purple><bounce>Two cute, cute girls</><waitfor=2>.
       - personSpeaking: Other
         textToShow: <waitfor=1>I can see why he went there. <color=red>You got some
           nice assets on you</color> <color=purple>Mikazuki</color><waitfor=2>.
@@ -4093,10 +4093,10 @@ MonoBehaviour:
         textToShow: <waitfor=1><color=red>Tell us where he is. Or I'll</color> <color=red><shake><b>KILL</>
           <color=red>you!</color><waitfor=2>.
       - personSpeaking: Player
-        textToShow: <waitfor=1><color=red>I'm not</color> <b><color=red>fucking scared
-          anymore</> <color=red>of guys like you</color><waitfor=2>.
+        textToShow: <waitfor=1><color=red>I'm not</color> <shake><color=red>fucking
+          scared anymore</> <color=red>of guys like you</color><waitfor=2>.
       - personSpeaking: Other
-        textToShow: <waitfor=1>Where did a <color=pink><b><shake>little girl like
+        textToShow: <waitfor=1>Where did a <color=purple><shake>little girl like
           you</> learn to fight like that?<waitfor=2>.
       - personSpeaking: Other
         textToShow: <waitfor=1..........<waitfor=2>.
@@ -4104,7 +4104,7 @@ MonoBehaviour:
         textToShow: <waitfor=1>Fine. I want out this life, I'm done with it. <color=yellow>I
           got kids to look after. I'm no role model. Look at me</color><waitfor=2>.
       - personSpeaking: Other
-        textToShow: <waitfor=1>Hes's in the <color=blue><b>Yamaguchi Hideout</><waitfor=2>.
+        textToShow: <waitfor=1>Hes's in the <color=green><b>Yamaguchi Hideout</><waitfor=2>.
       - personSpeaking: Other
         textToShow: <waitfor=1>Take the <b>path ahead</b> and you will get there<waitfor=2>.
       - personSpeaking: Other
@@ -4200,13 +4200,13 @@ MonoBehaviour:
       - personSpeaking: Boyfriend
         textToShow: <waitfor=1><color=red>Look who we have here then</color><waitfor=2>.
       - personSpeaking: Boyfriend
-        textToShow: <waitfor=1>How could I ever forget that <color=pink>pretty face</color>
-          of yours <color=purple>Mikazuki</color><waitfor=2>.
+        textToShow: <waitfor=1>How could I ever forget that <color=purple>pretty
+          face</color> of yours <color=purple>Mikazuki</color><waitfor=2>.
       - personSpeaking: Boyfriend
         textToShow: <waitfor=1><color=red>But you surprise me. Going around acting
-          like a</color> <color=blue>oyabun</color> <color=red>all of a sudden</color><waitfor=2>.
+          like a</color> <color=green>oyabun</color> <color=red>all of a sudden</color><waitfor=2>.
       - personSpeaking: Boyfriend
-        textToShow: <waitfor=1><color=red>Well I hate to remind you,</color> <color=pink>M</color><color=purple>i</color><color=pink>k</color><color=purple>a</color><color=pink>z</color><color=purple>u</color><color=pink>k</color><color=purple>i</color><color=pink>-</color><color=purple>c</color><color=pink>h</color><color=purple>a</color><color=pink>n</color>.
+        textToShow: <waitfor=1><color=red>Well I hate to remind you,</color><color=purple>Mikazuki</color>.
           <b><color=red><shake>but I'm the one who has the dick here, Not you</><waitfor=2>.
       - personSpeaking: Player
         textToShow: <waitfor=1><b><color=red><shake>Go fuck yourself, Natsuki!</><waitfor=2>.
@@ -4247,7 +4247,7 @@ MonoBehaviour:
       - personSpeaking: Boyfriend
         textToShow: <waitfor=1><shake>You........ you.....</shake><waitfor=2>.
       - personSpeaking: Player
-        textToShow: <waitfor=1><bounce><color=blue>I'm sorry</><waitfor=2>.
+        textToShow: <waitfor=1><bounce><color=green>I'm sorry</><waitfor=2>.
       - personSpeaking: Boyfriend
         textToShow: <waitfor=1><color=red><shake>She</> <bouncewill be here soon</bounce><waitfor=2>.
       - personSpeaking: Player
@@ -4257,7 +4257,7 @@ MonoBehaviour:
       - personSpeaking: Player
         textToShow: <waitfor=1><color=purple>You never needed to get into this</color><waitfor=2>.
       - personSpeaking: Boyfriend
-        textToShow: <waitfor=1><color=blue><bounce>I always cared about you. It's
+        textToShow: <waitfor=1><color=green><bounce>I always cared about you. It's
           over now</><waitfor=2>.
       - personSpeaking: Player
         textToShow: <waitfor=1><color=purple><shake>Natsuki! What do you mean!</><waitfor=2>.
@@ -4275,22 +4275,22 @@ MonoBehaviour:
       - personSpeaking: Player
         textToShow: <waitfor=1><color=purple><bounce>............Mama?</><waitfor=2>.
       - personSpeaking: Mother
-        textToShow: <waitfor=1><color=blue>Darling</color>=2>.
+        textToShow: <waitfor=1><color=green>Darling</color>=2>.
       - personSpeaking: Mother
-        textToShow: <waitfor=1><color=blue>My beautiful little flower</color><waitfor=2>.
+        textToShow: <waitfor=1><color=green>My beautiful little flower</color><waitfor=2>.
       - personSpeaking: Mother
-        textToShow: <waitfor=1><color=blue>I hoped and dreamed it would never come
+        textToShow: <waitfor=1><color=green>I hoped and dreamed it would never come
           to this</color><waitfor=2>.
       - personSpeaking: Mother
-        textToShow: <waitfor=1><color=blue>When I heard you were here</color><waitfor=2>.
+        textToShow: <waitfor=1><color=green>When I heard you were here</color><waitfor=2>.
       - personSpeaking: Mother
-        textToShow: <waitfor=1><color=blue>I'd be lying through my teeth if I said
+        textToShow: <waitfor=1><color=green>I'd be lying through my teeth if I said
           I wasn't</color> <color=yellow><bounce>dissapointed</><waitfor=2>.
       - personSpeaking: Mother
-        textToShow: <waitfor=1><color=blue>I never wanted you to see this life. I
-          wanted to shelter you from all harm</color><waitfor=2>.
+        textToShow: <waitfor=1><color=green>I never wanted you to see this life.
+          I wanted to shelter you from all harm</color><waitfor=2>.
       - personSpeaking: Mother
-        textToShow: <waitfor=1><color=blue>Grow up well, find a nice husband. Start
+        textToShow: <waitfor=1><color=green>Grow up well, find a nice husband. Start
           a beautiful family>/color><waitfor=2>.
       - personSpeaking: Mother
         textToShow: <waitfor=1><color=yellow<shake><b>Now.....I can't live with this</><waitfor=2>.
@@ -4303,11 +4303,11 @@ MonoBehaviour:
         textToShow: <waitfor=1><color=purple><shake><b>I didn't do anything wrong!</>
           <waitfor=2>.
       - personSpeaking: Mother
-        textToShow: <waitfor=1><color=blue>My petal. I'm sorry</color><waitfor=2>.
+        textToShow: <waitfor=1><color=green>My petal. I'm sorry</color><waitfor=2>.
       - personSpeaking: Mother
-        textToShow: <waitfor=1><color=blue>This has gone too far</color><waitfor=2>.
+        textToShow: <waitfor=1><color=green>This has gone too far</color><waitfor=2>.
       - personSpeaking: Mother
-        textToShow: <waitfor=1><color=blue>I was expecting you</color><waitfor=2>.
+        textToShow: <waitfor=1><color=green>I was expecting you</color><waitfor=2>.
       - personSpeaking: Mother
         textToShow: <waitfor=1><color=yellow>It's time</color><waitfor=2>.
       - personSpeaking: Mother
@@ -4350,7 +4350,7 @@ MonoBehaviour:
     newMusic: {fileID: 0}
     type: 0
     newBackground: {fileID: 0}
-    textToShow: <waitfor=1><color=blue><bounce>With the Keitosuru disbanded, petty
+    textToShow: <waitfor=1><color=green><bounce>With the Keitosuru disbanded, petty
       crime rates fell across the city</><waitfor=4>.
     conversation:
       cinematicView: 0
@@ -4379,7 +4379,7 @@ MonoBehaviour:
     newMusic: {fileID: 0}
     type: 0
     newBackground: {fileID: 0}
-    textToShow: <waitfor=1><color=blue><shake>The fall of the delinquents was felt
+    textToShow: <waitfor=1><color=green><shake>The fall of the delinquents was felt
       throughout the city</><waitfor=4>.
     conversation:
       cinematicView: 0
@@ -4400,9 +4400,9 @@ MonoBehaviour:
     newMusic: {fileID: 0}
     type: 0
     newBackground: {fileID: 0}
-    textToShow: <waitfor=1>Most of the ex <color=blue>Keitosuru members</color> owed
-      a favour to <color=purple>the Zokugai</color>, with the majority working their
-      way up to being hosts<waitfor=4>.
+    textToShow: <waitfor=1>Most of the ex <color=green>Keitosuru members</color>
+      owed a favour to <color=purple>the Zokugai</color>, with the majority working
+      their way up to being hosts<waitfor=4>.
     conversation:
       cinematicView: 0
       sentences: []
