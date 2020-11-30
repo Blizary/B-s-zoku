@@ -100,6 +100,7 @@ public class PlayerController : MonoBehaviour
             myPAC.ExecuteAttack1();
             attack1WasPerformed = true;
             StartCoroutine(Attack1PerformedReset());
+            myAnimator.SetTrigger("Attack1");
         }
     }
 
@@ -110,6 +111,7 @@ public class PlayerController : MonoBehaviour
             myPAC.ExecuteAttack2();
             attack2WasPerformed = true;
             StartCoroutine(Attack2PerformedReset());
+            myAnimator.SetTrigger("Attack2");
         }
     }
 
@@ -119,6 +121,7 @@ public class PlayerController : MonoBehaviour
         {
             myPAC.ExecuteCombo();
             attack2WasPerformed = false; // else combo can be spammed. (blanket fix)
+            myAnimator.SetTrigger("Combo");
         }
     }
 

@@ -34,6 +34,7 @@ public class EnemyControler : MonoBehaviour
     private Animator myAnimator;
     private Rigidbody2D rb;
     private MainLevelManager manager;
+    public SpriteRenderer sr;
  
 
     // Start is called before the first frame update
@@ -44,7 +45,7 @@ public class EnemyControler : MonoBehaviour
         currentHealth = health;
         canMove = true;
 
-        myAnimator = GetComponent<Animator>();
+        myAnimator = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -58,7 +59,20 @@ public class EnemyControler : MonoBehaviour
 
         CheckAttackRange();
         AttackPlayer();
+        FlipSprite();
+    }
 
+    // Function to swap sprite direction based on look direction
+    private void FlipSprite()
+    {
+        if (target.transform.position.x < transform.position.x) // need to look left
+        {
+            sr.flipX = false;
+        }
+        else
+        {
+            sr.flipX = true;
+        } 
     }
 
     /// <summary>
@@ -143,6 +157,7 @@ public class EnemyControler : MonoBehaviour
     {
         canMove = false;
         attacking = true;
+        myAnimator.SetTrigger("Attack");
         yield return new WaitForSeconds(attackDelay);
         collisionBox.GetComponent<EnemyCollider>().AttackTargets(damage);
         attacking = false;
@@ -175,8 +190,6 @@ public class EnemyControler : MonoBehaviour
     /// This function is called externally by the PlayerAttackController script to damage them the appropriate amount
     public void Damage(float _damage, GameObject _player)
     {
-        myAnimator.SetTrigger("EnemyWasHit");
-
         // Every time the enemy gets hit we want to give them a slight knockback
         Vector2 _knockbackDir = transform.position- _player.transform.position;
         StartCoroutine(DamageKnowbackEffect(_knockbackDir));
