@@ -10,6 +10,7 @@ public class MainLevelManager : MonoBehaviour
 {
     public int TESTEVENT;
 
+    public AudioSource audioPlayer;
     public GameObject instructionsUI;
     public GameObject deathUI;
     public TextAnimatorPlayer playerText;
@@ -19,6 +20,9 @@ public class MainLevelManager : MonoBehaviour
     public TextAnimatorPlayer blackScreenText;
     public Text pausedText;
     public GameObject background;
+    public GameObject dayBackground;
+    public GameObject eveningBackground;
+    public GameObject nightBackground;
 
     public List<BsZokuEvent> levelEvents;
 
@@ -87,11 +91,20 @@ public class MainLevelManager : MonoBehaviour
         if (levelEvents.Count!=0)
         {
             currentEvent = levelEvents[0];
+            if (currentEvent.newMusic != null)
+            {
+                audioPlayer.clip = currentEvent.newMusic;
+                audioPlayer.Play();
+            }
+
             switch (currentEvent.type)
             {
                 case BsZokuEvent.BsZokuEventType.BlackScreen:
                     //STOP PLAYER MOVEMENT HERE
+                    //Stop the audio
+                    audioPlayer.Stop();
                     GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+
                     foreach (GameObject p in players)
                     {
                         p.GetComponent<PlayerController>().SetFreezeState(true);
@@ -102,6 +115,7 @@ public class MainLevelManager : MonoBehaviour
                     break;
                 case BsZokuEvent.BsZokuEventType.Conversation:
                     //STOP PLAYER MOVEMNT HERE
+                   
                     GameObject[] gamers = GameObject.FindGameObjectsWithTag("Player");
                     foreach (GameObject p in gamers)
                     {
@@ -231,6 +245,7 @@ public class MainLevelManager : MonoBehaviour
             else //conversation finished
             {
                 levelEvents.RemoveAt(0);
+                enemyText.GetComponent<TextLocations>().DisableVisuals();
                 sentenceShown = false;
                 conversationOn = false;
                 conversationBlackBars.SetActive(false);
@@ -239,6 +254,7 @@ public class MainLevelManager : MonoBehaviour
                 foreach (GameObject p in players)
                 {
                     p.GetComponent<PlayerController>().SetFreezeState(false);
+                    p.GetComponent<PlayerController>().RemoveControls(false);
                 }
                 Debug.Log("conversation event complete");
                 UpdateEvent();
@@ -300,7 +316,10 @@ public class MainLevelManager : MonoBehaviour
         }
         if(currentEvent.newBackground!=null)
         {
-            background.GetComponent<SpriteRenderer>().sprite = currentEvent.newBackground;
+            dayBackground.SetActive(false);
+            eveningBackground.SetActive(false);
+            nightBackground.SetActive(false);
+            currentEvent.newBackground.SetActive(true);
         }    
         levelEvents.RemoveAt(0);
         Debug.Log("blackscreen event complete");

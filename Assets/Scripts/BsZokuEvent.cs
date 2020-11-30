@@ -9,6 +9,7 @@ using UnityEngine;
 public class BsZokuEvent
 {
     public string name;
+    public AudioClip newMusic;
     public enum BsZokuEventType
     {
         BlackScreen,
@@ -19,12 +20,13 @@ public class BsZokuEvent
     public BsZokuEventType type;
 
     [Header("FOR BLACKSCREEN")]
-    public Sprite newBackground;
+    public GameObject newBackground;
     [TextArea(3, 50), SerializeField]
     public string textToShow = " ";
 
     [Header("FOR CONVERSATIONS")]
     public Conversation conversation;
+    
 
     [Header("FOR WAVES")]
     public List<Wave> waves;

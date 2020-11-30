@@ -30,9 +30,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float timeBetweenAttack2AndCombo = 3f;
     [SerializeField] bool canDash = true;
 
+    public bool moveTowardsForce;
+    private Vector3 moveToLocation;
+    private TextLocations orderFrom;
+    public bool canControl;
+
 
     private void Start()
     {
+        canControl = true;
         //myCC = GetComponent<CharacterController>();
         myRigidbody = GetComponent<Rigidbody2D>();
         mySpriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -44,14 +50,21 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ForceMovement();
         // Code for run animation
+       
         bool playerHasHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
         bool playerHasVerticalSpeed = Mathf.Abs(myRigidbody.velocity.y) > Mathf.Epsilon;
-        if (playerHasHorizontalSpeed || playerHasVerticalSpeed)
+       
+        if(!frozen)
         {
-            myAnimator.SetBool("IsRunning", true);
+            if (playerHasHorizontalSpeed || playerHasVerticalSpeed)
+            {
+                myAnimator.SetBool("IsRunning", true);
+            }
+            else myAnimator.SetBool("IsRunning", false);
         }
-        else myAnimator.SetBool("IsRunning", false);
+       
 
         if (frozen) return;
 
@@ -89,9 +102,58 @@ public class PlayerController : MonoBehaviour
 
     private void ApplyMovement()
     {
-        Vector2 playerVelocity = new Vector2(walkInput.x * movementSpeed, walkInput.y * movementSpeed);
-        myRigidbody.velocity = playerVelocity;
+        if (canControl)
+        {
+            Vector2 playerVelocity = new Vector2(walkInput.x * movementSpeed, walkInput.y * movementSpeed);
+            myRigidbody.velocity = playerVelocity;
+        }
+       
     }
+
+    public void IssueMovement(Transform _position, TextLocations _order)
+    {
+        moveToLocation = _position.position;
+        orderFrom = _order;
+
+        moveTowardsForce = true;
+    }
+
+    void ForceMovement()
+    {
+       if(moveTowardsForce)
+        {
+
+            if (Vector2.Distance(transform.position,moveToLocation)>=1)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, moveToLocation, movementSpeed*Time.deltaTime);
+                if(moveToLocation.x>transform.position.x)
+                {
+                    //target is to the left of player
+                    mySpriteRenderer.flipX = false;
+                    myAttackRangeCollider.offset = new Vector2(0.75f, 0);
+
+                }
+                else
+                {
+                    mySpriteRenderer.flipX = true;
+                    myAttackRangeCollider.offset = new Vector2(-0.75f, 0);
+                }
+
+                myAnimator.SetBool("IsRunning", true);
+            }
+            else
+            {
+                moveTowardsForce = false;
+                myAnimator.SetBool("IsRunning", false);
+                orderFrom.ShowText();
+                SetFreezeState(true);
+            }
+           
+        }
+        
+
+    }
+
 
     public void OnAttack1(InputAction.CallbackContext context)
     {
@@ -165,5 +227,10 @@ public class PlayerController : MonoBehaviour
         {
             myRigidbody.velocity = new Vector2(0,0);
         }
+    }
+
+    public void RemoveControls( bool _state)
+    {
+        canControl =! _state;
     }
 }
