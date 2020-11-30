@@ -1,46 +1,52 @@
 fileFormatVersion: 2
-guid: 3a6fdec64f2edfa4dbf2e7da42ce4c1e
+guid: c5c57e82ffc61174bba624b4f41fb63b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2784975014871885314
-    second: Main_Character_2_Combo_Extreme_0
+      213: -7883029470752709957
+    second: Generic_Enemy_3_Run_0
   - first:
-      213: 5786523671391078638
-    second: Main_Character_2_Combo_Extreme_1
+      213: 4660791269300502226
+    second: Generic_Enemy_3_Run_1
   - first:
-      213: 3884825119720430833
-    second: Main_Character_2_Combo_Extreme_2
+      213: -7006011450468549795
+    second: Generic_Enemy_3_Run_2
   - first:
-      213: -6945403693576586930
-    second: Main_Character_2_Combo_Extreme_3
+      213: -8397772677481281844
+    second: Generic_Enemy_3_Run_3
   - first:
-      213: -4345576011731783753
-    second: Main_Character_2_Combo_Extreme_4
+      213: -6350260604975205796
+    second: Generic_Enemy_3_Run_4
   - first:
-      213: 7788281430272303056
-    second: Main_Character_2_Combo_Extreme_5
+      213: 6146154101950980678
+    second: Generic_Enemy_3_Run_5
   - first:
-      213: -5400963639974716285
-    second: Main_Character_2_Combo_Extreme_6
+      213: 3109040781797579834
+    second: Generic_Enemy_3_Run_6
   - first:
-      213: -8553820502296133017
-    second: Main_Character_2_Combo_Extreme_7
+      213: 30738710208817924
+    second: Generic_Enemy_3_Run_7
   - first:
-      213: 142182861289125970
-    second: Main_Character_2_Combo_Extreme_8
+      213: -9053025612916741300
+    second: Generic_Enemy_3_Run_8
   - first:
-      213: -1814335067455877777
-    second: Main_Character_2_Combo_Extreme_9
+      213: 8995463572731155527
+    second: Generic_Enemy_3_Run_9
   - first:
-      213: 4488856158122345001
-    second: Main_Character_2_Combo_Extreme_10
+      213: 7867386791739193428
+    second: Generic_Enemy_3_Run_10
   - first:
-      213: 2052136955660860111
-    second: Main_Character_2_Combo_Extreme_11
+      213: 3612316306329089364
+    second: Generic_Enemy_3_Run_11
   - first:
-      213: -6861936945987453097
-    second: Main_Character_2_Combo_Extreme_12
+      213: 7485818708037820552
+    second: Generic_Enemy_3_Run_12
+  - first:
+      213: 2944347052415377964
+    second: Generic_Enemy_3_Run_13
+  - first:
+      213: -4816588470866037173
+    second: Generic_Enemy_3_Run_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -126,190 +132,190 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Main_Character_2_Combo_Extreme_0
+      name: Generic_Enemy_3_Run_0
       rect:
         serializedVersion: 2
-        x: 14
+        x: 34
+        y: 32
+        width: 58
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb269d1667ad99290800000000000000
+      internalID: -7883029470752709957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Generic_Enemy_3_Run_1
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 32
+        width: 56
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2def5ea27f47ea040800000000000000
+      internalID: 4660791269300502226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Generic_Enemy_3_Run_3
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 32
+        width: 54
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc64f3e3e3e157b80800000000000000
+      internalID: -8397772677481281844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Generic_Enemy_3_Run_4
+      rect:
+        serializedVersion: 2
+        x: 315
         y: 31
+        width: 39
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c52bb49ff975fd7a0800000000000000
+      internalID: -6350260604975205796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Generic_Enemy_3_Run_5
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 32
         width: 45
-        height: 82
+        height: 85
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef9193abaf7c959d0800000000000000
-      internalID: -2784975014871885314
+      spriteID: 642299d87968b4550800000000000000
+      internalID: 6146154101950980678
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main_Character_2_Combo_Extreme_1
+      name: Generic_Enemy_3_Run_6
       rect:
         serializedVersion: 2
-        x: 103
+        x: 498
         y: 32
-        width: 67
-        height: 81
+        width: 56
+        height: 85
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee887adee9cdd4050800000000000000
-      internalID: 5786523671391078638
+      spriteID: a3c5f3f5e18852b20800000000000000
+      internalID: 3109040781797579834
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main_Character_2_Combo_Extreme_2
+      name: Generic_Enemy_3_Run_8
       rect:
         serializedVersion: 2
-        x: 196
+        x: 594
         y: 32
-        width: 67
-        height: 81
+        width: 54
+        height: 85
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fc537b1ddba9e530800000000000000
-      internalID: 3884825119720430833
+      spriteID: c4ba5978b213d5280800000000000000
+      internalID: -9053025612916741300
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main_Character_2_Combo_Extreme_3
+      name: Generic_Enemy_3_Run_9
       rect:
         serializedVersion: 2
-        x: 293
+        x: 687
         y: 31
+        width: 39
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7445b9a957e46dc70800000000000000
+      internalID: 8995463572731155527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Generic_Enemy_3_Run_10
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 32
         width: 45
-        height: 82
+        height: 85
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e497ea69328fc9f90800000000000000
-      internalID: -6945403693576586930
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Main_Character_2_Combo_Extreme_4
-      rect:
-        serializedVersion: 2
-        x: 374
-        y: 32
-        width: 78
-        height: 81
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7bfa44424a961b3c0800000000000000
-      internalID: -4345576011731783753
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Main_Character_2_Combo_Extreme_5
-      rect:
-        serializedVersion: 2
-        x: 467
-        y: 32
-        width: 78
-        height: 81
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0dfd62e52b8851c60800000000000000
-      internalID: 7788281430272303056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Main_Character_2_Combo_Extreme_6
-      rect:
-        serializedVersion: 2
-        x: 572
-        y: 31
-        width: 45
-        height: 82
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 38c918a5f2ceb05b0800000000000000
-      internalID: -5400963639974716285
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Main_Character_2_Combo_Extreme_7
-      rect:
-        serializedVersion: 2
-        x: 653
-        y: 32
-        width: 63
-        height: 81
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7628f20c299ba4980800000000000000
-      internalID: -8553820502296133017
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Main_Character_2_Combo_Extreme_9
-      rect:
-        serializedVersion: 2
-        x: 746
-        y: 32
-        width: 63
-        height: 81
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f6d02c07edf22d6e0800000000000000
-      internalID: -1814335067455877777
+      spriteID: 458f6389a929e2d60800000000000000
+      internalID: 7867386791739193428
       vertices: []
       indices: 
       edges: []

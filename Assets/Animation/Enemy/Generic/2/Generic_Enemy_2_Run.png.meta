@@ -1,40 +1,52 @@
 fileFormatVersion: 2
-guid: 291a6894bbe9a5b4f9a87a6a4a317955
+guid: 235d3df46f5ad374d825dbe8fb9f097e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4970185336345611268
-    second: Main_Character_2_Combo_Angry_0
+      213: 5808405423672979200
+    second: Generic_Enemy_2_Run_0
   - first:
-      213: -814075787909102653
-    second: Main_Character_2_Combo_Angry_1
+      213: 463220040018033162
+    second: Generic_Enemy_2_Run_1
   - first:
-      213: -9155561086009615046
-    second: Main_Character_2_Combo_Angry_2
+      213: 3309512899308589563
+    second: Generic_Enemy_2_Run_2
   - first:
-      213: -1862410583057697125
-    second: Main_Character_2_Combo_Angry_3
+      213: -6570036707051696579
+    second: Generic_Enemy_2_Run_3
   - first:
-      213: -6389310243131356849
-    second: Main_Character_2_Combo_Angry_4
+      213: 3846418846914110277
+    second: Generic_Enemy_2_Run_4
   - first:
-      213: 936744943346428580
-    second: Main_Character_2_Combo_Angry_5
+      213: -9078183436131154456
+    second: Generic_Enemy_2_Run_5
   - first:
-      213: 7362536664194446913
-    second: Main_Character_2_Combo_Angry_6
+      213: -3895528334748566718
+    second: Generic_Enemy_2_Run_6
   - first:
-      213: 1311253356883064699
-    second: Main_Character_2_Combo_Angry_7
+      213: -5138841857218025580
+    second: Generic_Enemy_2_Run_7
   - first:
-      213: 2826996637160043225
-    second: Main_Character_2_Combo_Angry_8
+      213: -1629495843902068556
+    second: Generic_Enemy_2_Run_8
   - first:
-      213: -7396122366920334545
-    second: Main_Character_2_Combo_Angry_9
+      213: 8205135258480597132
+    second: Generic_Enemy_2_Run_9
   - first:
-      213: 624368567441855818
-    second: Main_Character_2_Combo_Angry_10
+      213: 1924788295406113125
+    second: Generic_Enemy_2_Run_10
+  - first:
+      213: -8276293744546319327
+    second: Generic_Enemy_2_Run_11
+  - first:
+      213: 8352542354190947262
+    second: Generic_Enemy_2_Run_12
+  - first:
+      213: -1023145004526503410
+    second: Generic_Enemy_2_Run_13
+  - first:
+      213: -8216526339014171795
+    second: Generic_Enemy_2_Run_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -78,7 +90,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1023
+  spritePixelsToUnits: 837
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -120,13 +132,97 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Main_Character_2_Combo_Angry_0
+      name: Generic_Enemy_2_Run_0
       rect:
         serializedVersion: 2
-        x: 28
+        x: 34
+        y: 32
+        width: 58
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00fea7565f99b9050800000000000000
+      internalID: 5808405423672979200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Generic_Enemy_2_Run_1
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 32
+        width: 56
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0afd121c20bd6600800000000000000
+      internalID: 463220040018033162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Generic_Enemy_2_Run_3
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 32
+        width: 54
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3e08eaac6a82d4a0800000000000000
+      internalID: -6570036707051696579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Generic_Enemy_2_Run_4
+      rect:
+        serializedVersion: 2
+        x: 315
         y: 31
+        width: 39
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 543eea3ef89316530800000000000000
+      internalID: 3846418846914110277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Generic_Enemy_2_Run_5
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 32
         width: 45
-        height: 82
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +230,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf3b34f05ca560bb0800000000000000
-      internalID: -4970185336345611268
+      spriteID: 8e5419b5340d30280800000000000000
+      internalID: -9078183436131154456
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main_Character_2_Combo_Angry_1
+      name: Generic_Enemy_2_Run_6
       rect:
         serializedVersion: 2
-        x: 111
+        x: 498
         y: 32
-        width: 65
-        height: 81
+        width: 56
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,20 +251,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c38e615262d3b4f0800000000000000
-      internalID: -814075787909102653
+      spriteID: 24bb7d27e9d40f9c0800000000000000
+      internalID: -3895528334748566718
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main_Character_2_Combo_Angry_2
+      name: Generic_Enemy_2_Run_8
       rect:
         serializedVersion: 2
-        x: 204
+        x: 594
         y: 32
-        width: 65
-        height: 81
+        width: 54
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,20 +272,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3dd10553b9e0f080800000000000000
-      internalID: -9155561086009615046
+      spriteID: 4b8ed35d92ed269e0800000000000000
+      internalID: -1629495843902068556
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main_Character_2_Combo_Angry_3
+      name: Generic_Enemy_2_Run_9
       rect:
         serializedVersion: 2
-        x: 307
+        x: 687
         y: 31
+        width: 39
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c88d4cf7b0f7ed170800000000000000
+      internalID: 8205135258480597132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Generic_Enemy_2_Run_10
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 32
         width: 45
-        height: 82
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,155 +314,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b96fae231736726e0800000000000000
-      internalID: -1862410583057697125
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Main_Character_2_Combo_Angry_4
-      rect:
-        serializedVersion: 2
-        x: 390
-        y: 32
-        width: 65
-        height: 81
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f4904669f2c9457a0800000000000000
-      internalID: -6389310243131356849
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Main_Character_2_Combo_Angry_5
-      rect:
-        serializedVersion: 2
-        x: 493
-        y: 31
-        width: 45
-        height: 82
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4aaae49109cfffc00800000000000000
-      internalID: 936744943346428580
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Main_Character_2_Combo_Angry_6
-      rect:
-        serializedVersion: 2
-        x: 567
-        y: 32
-        width: 77
-        height: 81
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1467913761cfc2660800000000000000
-      internalID: 7362536664194446913
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Main_Character_2_Combo_Angry_7
-      rect:
-        serializedVersion: 2
-        x: 660
-        y: 32
-        width: 77
-        height: 81
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b77bd831bf1823210800000000000000
-      internalID: 1311253356883064699
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Main_Character_2_Combo_Angry_8
-      rect:
-        serializedVersion: 2
-        x: 772
-        y: 31
-        width: 45
-        height: 82
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9d2f523a6728b3720800000000000000
-      internalID: 2826996637160043225
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Main_Character_2_Combo_Angry_9
-      rect:
-        serializedVersion: 2
-        x: 846
-        y: 32
-        width: 51
-        height: 81
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f236464c4e1bb5990800000000000000
-      internalID: -7396122366920334545
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Main_Character_2_Combo_Angry_10
-      rect:
-        serializedVersion: 2
-        x: 939
-        y: 32
-        width: 51
-        height: 81
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a459a4f67e33aa800800000000000000
-      internalID: 624368567441855818
+      spriteID: 561d287b1c836ba10800000000000000
+      internalID: 1924788295406113125
       vertices: []
       indices: 
       edges: []

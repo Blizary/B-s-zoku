@@ -456,11 +456,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
+  frozen: 0
   myAttackRange: {fileID: 0}
   attack1WasPerformed: 0
   attack2WasPerformed: 0
   timeBetweenAttack1And2: 2
   timeBetweenAttack2AndCombo: 3
+  canDash: 1
 --- !u!50 &324220282
 Rigidbody2D:
   serializedVersion: 4
@@ -1136,6 +1138,8 @@ MonoBehaviour:
   respawnTimer: 10
   enemyPrefab: {fileID: 1168432531503762176, guid: b190890923ce90b4282e21d8ffe9606b,
     type: 3}
+  timedSpawn: 0
+  numToSpawn: 0
 --- !u!4 &1911519051
 Transform:
   m_ObjectHideFlags: 0

@@ -1,34 +1,25 @@
 fileFormatVersion: 2
-guid: 0e95edad2a066e5489ece64e4886fc52
+guid: a75f5e6441896ce4896963e48ba762ca
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7632148272067214578
-    second: Main_Character_2_Combo_Neutral_0
+      213: -7956784300498705892
+    second: Generic_Enemy_3_Revive_0
   - first:
-      213: 3219599034984391487
-    second: Main_Character_2_Combo_Neutral_1
+      213: 6112859944070757294
+    second: Generic_Enemy_3_Revive_1
   - first:
-      213: 8847516119474653897
-    second: Main_Character_2_Combo_Neutral_2
+      213: 6130073103425179221
+    second: Generic_Enemy_3_Revive_2
   - first:
-      213: -258401175759581600
-    second: Main_Character_2_Combo_Neutral_3
+      213: 3122014247112445368
+    second: Generic_Enemy_3_Revive_3
   - first:
-      213: -7183209804713820074
-    second: Main_Character_2_Combo_Neutral_4
+      213: -7484649848539826994
+    second: Generic_Enemy_3_Revive_4
   - first:
-      213: 5520004485760796076
-    second: Main_Character_2_Combo_Neutral_5
-  - first:
-      213: -5691803529200074858
-    second: Main_Character_2_Combo_Neutral_6
-  - first:
-      213: -7549138834876698800
-    second: Main_Character_2_Combo_Neutral_7
-  - first:
-      213: -1459372964635449321
-    second: Main_Character_2_Combo_Neutral_8
+      213: -7961523396337577642
+    second: Generic_Enemy_3_Revive_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -72,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 837
+  spritePixelsToUnits: 558
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -114,34 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Main_Character_2_Combo_Neutral_0
+      name: Generic_Enemy_3_Revive_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 31
-        width: 45
-        height: 82
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e03825a5599251690800000000000000
-      internalID: -7632148272067214578
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Main_Character_2_Combo_Neutral_1
-      rect:
-        serializedVersion: 2
-        x: 111
+        x: 0
         y: 32
-        width: 65
-        height: 81
+        width: 89
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f336f6f93405eac20800000000000000
-      internalID: 3219599034984391487
+      spriteID: c12ae56e5d2d39190800000000000000
+      internalID: -7956784300498705892
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main_Character_2_Combo_Neutral_2
+      name: Generic_Enemy_3_Revive_1
       rect:
         serializedVersion: 2
-        x: 204
+        x: 93
         y: 32
-        width: 65
-        height: 81
+        width: 89
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,41 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ca44d5d801b8ca70800000000000000
-      internalID: 8847516119474653897
+      spriteID: eab3d085bbd35d450800000000000000
+      internalID: 6112859944070757294
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main_Character_2_Combo_Neutral_3
+      name: Generic_Enemy_3_Revive_2
       rect:
         serializedVersion: 2
-        x: 299
-        y: 31
-        width: 45
-        height: 82
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 06e8e4def79f96cf0800000000000000
-      internalID: -258401175759581600
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Main_Character_2_Combo_Neutral_4
-      rect:
-        serializedVersion: 2
-        x: 381
+        x: 187
         y: 32
         width: 77
-        height: 81
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6500eeaadbc105c90800000000000000
-      internalID: -7183209804713820074
+      spriteID: 55e85d05205621550800000000000000
+      internalID: 6130073103425179221
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main_Character_2_Combo_Neutral_5
+      name: Generic_Enemy_3_Revive_3
       rect:
         serializedVersion: 2
-        x: 474
+        x: 302
         y: 32
-        width: 77
-        height: 81
+        width: 60
+        height: 76
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -233,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca5c55465defa9c40800000000000000
-      internalID: 5520004485760796076
+      spriteID: 8bd88d6aa6f935b20800000000000000
+      internalID: 3122014247112445368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main_Character_2_Combo_Neutral_6
+      name: Generic_Enemy_3_Revive_4
       rect:
         serializedVersion: 2
-        x: 578
+        x: 406
         y: 31
         width: 45
-        height: 82
+        height: 86
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -254,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69ff6beb8d6a201b0800000000000000
-      internalID: -5691803529200074858
+      spriteID: ec43a9d3e9e212890800000000000000
+      internalID: -7484649848539826994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main_Character_2_Combo_Neutral_7
+      name: Generic_Enemy_3_Revive_5
       rect:
         serializedVersion: 2
-        x: 660
-        y: 32
-        width: 51
-        height: 81
+        x: 499
+        y: 31
+        width: 45
+        height: 86
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -275,29 +224,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05f611b0a321c3790800000000000000
-      internalID: -7549138834876698800
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Main_Character_2_Combo_Neutral_8
-      rect:
-        serializedVersion: 2
-        x: 753
-        y: 32
-        width: 51
-        height: 81
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 718681055044fbbe0800000000000000
-      internalID: -1459372964635449321
+      spriteID: 651565a27acf28190800000000000000
+      internalID: -7961523396337577642
       vertices: []
       indices: 
       edges: []

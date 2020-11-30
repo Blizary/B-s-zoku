@@ -1,46 +1,25 @@
 fileFormatVersion: 2
-guid: bfc017ef1f2964f4795472275521718b
+guid: 6c7d63aa09e610e49ade809bfa7c68c1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1957871161012476435
-    second: BF_Enemy_Combo_0
+      213: 4529934835137207912
+    second: Generic_Enemy_2_Revive_0
   - first:
-      213: 3330081792729201392
-    second: BF_Enemy_Combo_1
+      213: -1233187062631357307
+    second: Generic_Enemy_2_Revive_1
   - first:
-      213: -2252291905984510716
-    second: BF_Enemy_Combo_2
+      213: -177153556820816060
+    second: Generic_Enemy_2_Revive_2
   - first:
-      213: 7177194657285467039
-    second: BF_Enemy_Combo_3
+      213: 8322382860090810110
+    second: Generic_Enemy_2_Revive_3
   - first:
-      213: 4906453389206244412
-    second: BF_Enemy_Combo_4
+      213: -5928908581264683679
+    second: Generic_Enemy_2_Revive_4
   - first:
-      213: 6951838363980975874
-    second: BF_Enemy_Combo_5
-  - first:
-      213: 8014673328355527061
-    second: BF_Enemy_Combo_6
-  - first:
-      213: -2568096148953089915
-    second: BF_Enemy_Combo_7
-  - first:
-      213: -7098954278372661736
-    second: BF_Enemy_Combo_8
-  - first:
-      213: 4872887983007633554
-    second: BF_Enemy_Combo_9
-  - first:
-      213: -4729674167473370699
-    second: BF_Enemy_Combo_10
-  - first:
-      213: 6200934990270168387
-    second: BF_Enemy_Combo_11
-  - first:
-      213: -974120916892384890
-    second: BF_Enemy_Combo_12
+      213: -3988751788744976746
+    second: Generic_Enemy_2_Revive_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -84,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 837
+  spritePixelsToUnits: 558
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,13 +105,97 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BF_Enemy_Combo_0
+      name: Generic_Enemy_2_Revive_0
       rect:
         serializedVersion: 2
-        x: 34
+        x: 0
+        y: 32
+        width: 89
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e55006bbf8dde30800000000000000
+      internalID: 4529934835137207912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Generic_Enemy_2_Revive_1
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 32
+        width: 89
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 584204676e6d2eee0800000000000000
+      internalID: -1233187062631357307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Generic_Enemy_2_Revive_2
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 32
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44f8ff657cf9a8df0800000000000000
+      internalID: -177153556820816060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Generic_Enemy_2_Revive_3
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 32
+        width: 60
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efe138c0e1b0f7370800000000000000
+      internalID: 8322382860090810110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Generic_Enemy_2_Revive_4
+      rect:
+        serializedVersion: 2
+        x: 406
         y: 31
         width: 45
-        height: 93
+        height: 86
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,62 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de5aed36d8e34d4e0800000000000000
-      internalID: -1957871161012476435
+      spriteID: 16d04fbde0948bda0800000000000000
+      internalID: -5928908581264683679
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BF_Enemy_Combo_1
+      name: Generic_Enemy_2_Revive_5
       rect:
         serializedVersion: 2
-        x: 108
-        y: 32
-        width: 69
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0fabe983fb3d63e20800000000000000
-      internalID: 3330081792729201392
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BF_Enemy_Combo_2
-      rect:
-        serializedVersion: 2
-        x: 201
-        y: 32
-        width: 69
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4054e45d1704eb0e0800000000000000
-      internalID: -2252291905984510716
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BF_Enemy_Combo_3
-      rect:
-        serializedVersion: 2
-        x: 313
+        x: 499
         y: 31
         width: 45
-        height: 93
+        height: 86
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,113 +224,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9be45fa3848a9360800000000000000
-      internalID: 7177194657285467039
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BF_Enemy_Combo_4
-      rect:
-        serializedVersion: 2
-        x: 385
-        y: 32
-        width: 75
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c3c46aaac59371440800000000000000
-      internalID: 4906453389206244412
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BF_Enemy_Combo_5
-      rect:
-        serializedVersion: 2
-        x: 478
-        y: 32
-        width: 75
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 20fc40dd824e97060800000000000000
-      internalID: 6951838363980975874
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BF_Enemy_Combo_6
-      rect:
-        serializedVersion: 2
-        x: 592
-        y: 31
-        width: 45
-        height: 93
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 599cd67bde6d93f60800000000000000
-      internalID: 8014673328355527061
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BF_Enemy_Combo_8
-      rect:
-        serializedVersion: 2
-        x: 678
-        y: 31
-        width: 64
-        height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 816abd812b27b7d90800000000000000
-      internalID: -7098954278372661736
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BF_Enemy_Combo_10
-      rect:
-        serializedVersion: 2
-        x: 772
-        y: 31
-        width: 63
-        height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5b988605762dc5eb0800000000000000
-      internalID: -4729674167473370699
+      spriteID: 696d6a6a16b15a8c0800000000000000
+      internalID: -3988751788744976746
       vertices: []
       indices: 
       edges: []
