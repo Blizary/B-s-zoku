@@ -108,6 +108,8 @@ MonoBehaviour:
   floatingDamageNumber: {fileID: 451249374006072985, guid: 04005348ba74686419c7762b34016841,
     type: 3}
   slider: {fileID: 3740318747114597271}
+  damageSound: {fileID: 8300000, guid: ecc05ad52e34e29489f964b8c175bc75, type: 3}
+  soundProducer: {fileID: 0}
   inAttackRange: 0
   sr: {fileID: 3607604986315391085}
 --- !u!1 &2584876140024141079

@@ -20,7 +20,11 @@ public class EnemyControler : MonoBehaviour
     public GameObject collisionBox;
     public GameObject floatingDamageNumber;
     public GameObject slider;
-    
+
+    [Header("Sound Effects")]
+    public AudioClip damageSound;
+    public AudioSource soundProducer;
+
 
     private float currentHealth;
     private bool canMove;
@@ -44,6 +48,7 @@ public class EnemyControler : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Player");//needs replacement in the future to acomodate 2 players
         manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<MainLevelManager>();
+        soundProducer = GameObject.FindGameObjectWithTag("SoundEffects").GetComponent<AudioSource>();
         currentHealth = health;
         canMove = true;
         checkedForDeath = false;
@@ -212,6 +217,11 @@ public class EnemyControler : MonoBehaviour
     {
         // Every time the enemy gets hit we want to give them a slight knockback
         Vector2 _knockbackDir = transform.position- _player.transform.position;
+        int rand = Random.Range(0, 100);
+        if(rand>=60)
+        {
+            soundProducer.PlayOneShot(damageSound);
+        }
         StartCoroutine(DamageKnowbackEffect(_knockbackDir));
 
         currentHealth -= _damage;
