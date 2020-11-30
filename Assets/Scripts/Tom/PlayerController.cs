@@ -235,6 +235,7 @@ public class PlayerController : MonoBehaviour
 
         if (frozen)
         {
+            myRigidbody = GetComponent<Rigidbody2D>();
             myRigidbody.velocity = new Vector2(0,0);
         }
     }

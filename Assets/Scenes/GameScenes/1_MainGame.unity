@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -227,7 +227,7 @@ PrefabInstance:
     - target: {fileID: 4611379442880783104, guid: 909e20da1d60d7a4595191a2c7661e71,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.62
+      value: -23.8
       objectReference: {fileID: 0}
     - target: {fileID: 4611379442880783104, guid: 909e20da1d60d7a4595191a2c7661e71,
         type: 3}
@@ -262,7 +262,7 @@ PrefabInstance:
     - target: {fileID: 4611379442880783104, guid: 909e20da1d60d7a4595191a2c7661e71,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4611379442880783104, guid: 909e20da1d60d7a4595191a2c7661e71,
         type: 3}
@@ -744,11 +744,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 162706810}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.62, y: 1.5920504, z: -10}
+  m_LocalPosition: {x: -23.8, y: 1.5920504, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &162706814
 MonoBehaviour:
@@ -2059,7 +2059,7 @@ RectTransform:
   - {fileID: 461499193}
   - {fileID: 1919383493}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3105,7 +3105,7 @@ Transform:
   - {fileID: 503891992}
   - {fileID: 577211058}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1319472445
 GameObject:
@@ -3143,7 +3143,7 @@ Transform:
   - {fileID: 489956971}
   - {fileID: 879307094}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1533441704
 GameObject:
@@ -3205,7 +3205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533441704}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.62, y: 1.5920504, z: -10}
+  m_LocalPosition: {x: -23.8, y: 1.5920504, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 31709383}
@@ -3914,7 +3914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd38dbfbcb4b0a84e956f23a4ad03c3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TESTEVENT: 10
+  TESTEVENT: 0
   audioPlayer: {fileID: 162706815}
   instructionsUI: {fileID: 53617478}
   deathUI: {fileID: 2075712546}
@@ -4716,7 +4716,7 @@ Transform:
   m_Children:
   - {fileID: 1617447446}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1927522427
 MonoBehaviour:

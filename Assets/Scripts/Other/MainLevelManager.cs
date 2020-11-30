@@ -94,8 +94,8 @@ public class MainLevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       //WaveController();
-       //ConversationController();
+       WaveController();
+       ConversationController();
     }
 
 
@@ -117,14 +117,23 @@ public class MainLevelManager : MonoBehaviour
                     //Stop the audio
                     audioPlayer.Stop();
                     
-                    /*
-                    GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-
-                    foreach (GameObject p in players)
+                    if(GameObject.FindGameObjectWithTag("Player"))
                     {
-                        p.GetComponent<PlayerController>().SetFreezeState(true);
+                        Debug.Log("obj found : " + GameObject.FindGameObjectWithTag("Player"));
+                        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+
+                        foreach (GameObject p in players)
+                        {
+                            Debug.Log("i found something and it is "+p.name);
+                            if(p.GetComponent<PlayerController>())
+                            {
+                                p.GetComponent<PlayerController>().SetFreezeState(true);
+                            }
+                           
+                        }
                     }
-                    */
+                   
+                    
                     
                     blackScreenOn = true;
                     blackScreen.SetActive(true);
@@ -132,11 +141,15 @@ public class MainLevelManager : MonoBehaviour
                     break;
                 case BsZokuEvent.BsZokuEventType.Conversation:
                     //STOP PLAYER MOVEMNT HERE
-                   
-                    GameObject[] gamers = GameObject.FindGameObjectsWithTag("Player");
-                    foreach (GameObject p in gamers)
+
+                    if (GameObject.FindGameObjectWithTag("Player"))
                     {
-                        p.GetComponent<PlayerController>().SetFreezeState(true);
+                        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+
+                        foreach (GameObject p in players)
+                        {
+                            p.GetComponent<PlayerController>().SetFreezeState(true);
+                        }
                     }
                     if (currentEvent.conversation.cinematicView)
                     {
