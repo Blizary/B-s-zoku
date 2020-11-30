@@ -35,6 +35,8 @@ public class EnemyControler : MonoBehaviour
     private Rigidbody2D rb;
     private MainLevelManager manager;
     public SpriteRenderer sr;
+
+    private bool checkedForDeath;
  
 
     // Start is called before the first frame update
@@ -44,7 +46,7 @@ public class EnemyControler : MonoBehaviour
         manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<MainLevelManager>();
         currentHealth = health;
         canMove = true;
-
+        checkedForDeath = false;
         myAnimator = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -85,24 +87,35 @@ public class EnemyControler : MonoBehaviour
             if (!closeToTarget)
             {
                 transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
+                myAnimator.SetBool("Moving",true);
             }
             else
             {
                 if (Mathf.Abs( transform.position.y - target.transform.position.y) >= 0.2f)//not on the same line as player
                 {            
                     transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, target.transform.position.y, transform.position.z), (speed/2) * Time.deltaTime);
+                    myAnimator.SetBool("Moving", true);
                 }
                 else
                 {
                     if(Mathf.Abs( transform.position.x - target.transform.position.x) >= attackRange-0.2f)
                     {
                         transform.position = Vector3.MoveTowards(transform.position, target.transform.position, (speed / 2) * Time.deltaTime);
+                        myAnimator.SetBool("Moving", true);
+                    }
+                    else
+                    {
+                        myAnimator.SetBool("Moving", false);
                     }
                     
                 }
             }
            
            
+        }
+        else
+        {
+            myAnimator.SetBool("Moving", false);
         }
     }
 
@@ -145,7 +158,7 @@ public class EnemyControler : MonoBehaviour
     {
         if (!attacking)
         {
-            if (inAttackRange == true)//enemy is in range
+            if (inAttackRange == true && !checkedForDeath)//enemy is in range
             {
                // Debug.Log("close enough to attack");
                 StartCoroutine(IEAttackPlayer());
@@ -161,7 +174,11 @@ public class EnemyControler : MonoBehaviour
         yield return new WaitForSeconds(attackDelay);
         collisionBox.GetComponent<EnemyCollider>().AttackTargets(damage);
         attacking = false;
-        canMove = true;
+        if(!checkedForDeath)
+        {
+            canMove = true;
+        }
+        
     }
 
     /// <summary>
@@ -169,8 +186,9 @@ public class EnemyControler : MonoBehaviour
     /// </summary>
     void DeathCheck()
     {
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !checkedForDeath)
         {
+            checkedForDeath = true;
             canMove = false;
             //Enemy is dead here
             StartCoroutine(Death());
@@ -180,8 +198,10 @@ public class EnemyControler : MonoBehaviour
     private IEnumerator Death()
     {
         //QUEU ANIMATIONS AND PRATICLES HERE
-        yield return new WaitForSeconds(0.0f);
+        myAnimator.SetTrigger("Death");
         Instantiate(explosionPS, transform.position, Quaternion.identity);
+   
+        yield return new WaitForSeconds(1f);
         manager.UpdateEnemiesKilled();
         Destroy(this.gameObject);
 
@@ -225,7 +245,11 @@ public class EnemyControler : MonoBehaviour
         //particle on hit
         yield return new WaitForSeconds(1);
         knockbackDir = Vector3.zero;
-        canMove = true;
+        if(!checkedForDeath)
+        {
+            canMove = true;
+        }
+        
           
     }
 

@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class MainLevelManager : MonoBehaviour
 {
+    public int TESTEVENT;
 
     public GameObject instructionsUI;
     public GameObject deathUI;
@@ -47,8 +48,17 @@ public class MainLevelManager : MonoBehaviour
         if (PlayerPrefs.HasKey("LastWave"))
         {
             eventCounter = PlayerPrefs.GetInt("LastWave");
-            eventCounter -= 2;
-            for(int i=0;i< eventCounter; i++)
+            if(eventCounter>3)
+            {
+                eventCounter -= 2;
+            }
+
+            if (TESTEVENT != 0)
+            {
+                eventCounter = TESTEVENT-1;
+            }
+
+            for (int i=0;i< eventCounter; i++)
             {
                 levelEvents.RemoveAt(0);
                

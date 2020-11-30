@@ -13,6 +13,7 @@ public class LevelManager : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("1_MainGame");
+        PlayerPrefs.SetInt("LastWave", 0);
     }
 
     public void QuitGame()
