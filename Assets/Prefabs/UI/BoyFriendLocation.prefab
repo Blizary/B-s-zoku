@@ -199,6 +199,7 @@ MonoBehaviour:
   textBuble: {fileID: 604271197006680461}
   playerLocation: {fileID: 1067495694753041559}
   spriteR: {fileID: 0}
+  ancor: {fileID: 0}
 --- !u!1 &604271197006680461
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,7 +425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerAnimPlayerOnChange: 0
-  effectIntensityMultiplier: 0.2
+  effectIntensityMultiplier: 0.15
   appearancesContainer:
     tags:
     - size
