@@ -31,6 +31,8 @@ public class MainLevelManager : MonoBehaviour
     public GameObject gangstaBoss;
     public GameObject boyfriendPoint;
     public GameObject boyfriendBoss;
+    public GameObject momPoint;
+    public GameObject momBoss;
 
 
     private GameObject spawner;
@@ -106,10 +108,21 @@ public class MainLevelManager : MonoBehaviour
             currentEvent = levelEvents[0];
             if (currentEvent.newMusic != null)
             {
-                audioPlayer.clip = currentEvent.newMusic;
-                audioPlayer.Play();
+                if(audioPlayer.clip!=currentEvent.newMusic)
+                {
+                    audioPlayer.clip = currentEvent.newMusic;
+                    audioPlayer.Play();
+                }
+                
             }
-            
+            if (currentEvent.newBackground != null)
+            {
+                dayBackground.SetActive(false);
+                eveningBackground.SetActive(false);
+                nightBackground.SetActive(false);
+                currentEvent.newBackground.SetActive(true);
+            }
+
             switch (currentEvent.type)
             {
                 case BsZokuEvent.BsZokuEventType.BlackScreen:
@@ -192,14 +205,24 @@ public class MainLevelManager : MonoBehaviour
                         }
                     }
 
+
                     if (currentEvent.waves[0].allAtOnce)//Spawn enemies all at once
                     {
                         for(int i = 0;i<currentEvent.waves[0].enemies.Count;i++)
                         {
                             for(int j= 0;j<currentEvent.waves[0].enemies[i].amount;j++)
                             {
-                                int randSpawn = Random.Range(0, spawner.transform.childCount);
-                                spawner.transform.GetChild(randSpawn).GetComponent<EnemySpawner>().Spawn(currentEvent.waves[0].enemies[i].enemyType);
+                                if (currentEvent.spawnlocation == null)
+                                {
+                                    int randSpawn = Random.Range(0, spawner.transform.childCount);
+                                    spawner.transform.GetChild(randSpawn).GetComponent<EnemySpawner>().Spawn(currentEvent.waves[0].enemies[i].enemyType);
+                                }
+                                else
+                                {
+                                    Debug.Log("spawn at location");
+                                    GameObject newMob = Instantiate(currentEvent.waves[0].enemies[i].enemyType, currentEvent.spawnlocation.transform);
+                                }
+                                 
                             }
                         }
                     }
@@ -271,8 +294,18 @@ public class MainLevelManager : MonoBehaviour
 
                             break;
                         case "Mother":
-                            enemyText = GameObject.FindGameObjectWithTag("Mother");
-                            enemyText.GetComponent<TextLocations>().DisplayText(currentEvent.conversation.sentences[0].textToShow);
+                            if (GameObject.FindGameObjectWithTag("Mother"))
+                            {
+                                enemyText = GameObject.FindGameObjectWithTag("Mother");
+                                enemyText.GetComponent<TextLocations>().DisplayText(currentEvent.conversation.sentences[0].textToShow);
+                            }
+                            else
+                            {
+                                GameObject newGangsta = Instantiate(momBoss, momPoint.transform);
+                                enemyText = GameObject.FindGameObjectWithTag("Mother");
+                                enemyText.GetComponent<TextLocations>().DisplayText(currentEvent.conversation.sentences[0].textToShow);
+                            }
+
                             break;
                         case "Tutorial":
                             enemyText = GameObject.FindGameObjectWithTag("Tutorial");
@@ -370,13 +403,7 @@ public class MainLevelManager : MonoBehaviour
         {
             p.GetComponent<PlayerController>().frozen = false;
         }
-        if(currentEvent.newBackground!=null)
-        {
-            dayBackground.SetActive(false);
-            eveningBackground.SetActive(false);
-            nightBackground.SetActive(false);
-            currentEvent.newBackground.SetActive(true);
-        }    
+       
         levelEvents.RemoveAt(0);
         Debug.Log("blackscreen event complete");
         UpdateEvent();

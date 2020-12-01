@@ -217,11 +217,23 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7848586176799381007, guid: 5c9b7811e2dcbf1468e70681d5917443,
+        type: 3}
+      propertyPath: m_text
+      value: '
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 7848586177106559674, guid: 5c9b7811e2dcbf1468e70681d5917443,
         type: 3}
       propertyPath: spriteR
       value: 
       objectReference: {fileID: 1160247343247244279}
+    - target: {fileID: 7848586177106559674, guid: 5c9b7811e2dcbf1468e70681d5917443,
+        type: 3}
+      propertyPath: ancor
+      value: 
+      objectReference: {fileID: 2823038427198693024}
     - target: {fileID: 7848586177106559812, guid: 5c9b7811e2dcbf1468e70681d5917443,
         type: 3}
       propertyPath: m_LocalPosition.x

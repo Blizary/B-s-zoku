@@ -10,6 +10,7 @@ public class BsZokuEvent
 {
     public string name;
     public AudioClip newMusic;
+    public GameObject newBackground;
     public enum BsZokuEventType
     {
         BlackScreen,
@@ -20,7 +21,7 @@ public class BsZokuEvent
     public BsZokuEventType type;
 
     [Header("FOR BLACKSCREEN")]
-    public GameObject newBackground;
+  
     [TextArea(3, 50), SerializeField]
     public string textToShow = " ";
 
@@ -30,6 +31,7 @@ public class BsZokuEvent
 
     [Header("FOR WAVES")]
     public List<Wave> waves;
+    public GameObject spawnlocation;
 
 
 }

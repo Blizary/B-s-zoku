@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -227,12 +227,12 @@ PrefabInstance:
     - target: {fileID: 4611379442880783104, guid: 909e20da1d60d7a4595191a2c7661e71,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -23.8
+      value: -24.1
       objectReference: {fileID: 0}
     - target: {fileID: 4611379442880783104, guid: 909e20da1d60d7a4595191a2c7661e71,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.14
+      value: -0.19
       objectReference: {fileID: 0}
     - target: {fileID: 4611379442880783104, guid: 909e20da1d60d7a4595191a2c7661e71,
         type: 3}
@@ -678,6 +678,7 @@ GameObject:
   - component: {fileID: 162706811}
   - component: {fileID: 162706814}
   - component: {fileID: 162706815}
+  - component: {fileID: 162706816}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -744,7 +745,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 162706810}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.8, y: 1.5920504, z: -10}
+  m_LocalPosition: {x: -24.1, y: 1.5420504, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -880,6 +881,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &162706816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162706810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &163969091
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,7 +938,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 163969091}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -36.4, y: -3.4, z: 0}
+  m_LocalPosition: {x: -32.29, y: -3.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1309673356}
@@ -1017,7 +1049,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 323175070}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.23, y: -3.5, z: 0}
+  m_LocalPosition: {x: -9.23, y: -3.78, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1309673356}
@@ -1888,7 +1920,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 503891991}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.6, y: -0.99, z: 0}
+  m_LocalPosition: {x: -15.72, y: -3.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1309673356}
@@ -2173,7 +2205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 577211057}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.5, y: -3.9, z: 0}
+  m_LocalPosition: {x: -22.5, y: -3.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1309673356}
@@ -2272,7 +2304,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 768399934}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: -2.5, z: 0}
+  m_LocalPosition: {x: 5.75, y: -3.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1309673356}
@@ -2833,6 +2865,7 @@ Transform:
   m_Children:
   - {fileID: 1829102828}
   - {fileID: 970049323}
+  - {fileID: 2098374223}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2998,7 +3031,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1304022366}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.3, y: -2.9, z: 0}
+  m_LocalPosition: {x: -3.97, y: -2.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1309673356}
@@ -3205,7 +3238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533441704}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.8, y: 1.5920504, z: -10}
+  m_LocalPosition: {x: -24.1, y: 1.5420504, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 31709383}
@@ -3894,7 +3927,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1927522426}
   - component: {fileID: 1927522425}
-  - component: {fileID: 1927522427}
   m_Layer: 0
   m_Name: _Manager
   m_TagString: Manager
@@ -3931,55 +3963,60 @@ MonoBehaviour:
   levelEvents:
   - name: Date (cutscene)
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 0}
+    type: 0
     textToShow: <waitfor=1>November 18th, 1987<waitfor=3>.
     conversation:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Time (cutscene)
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 0}
+    type: 0
     textToShow: <waitfor=1>11:40 am<waitfor=3>.
     conversation:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Place (cutscene)
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 0}
+    type: 0
     textToShow: <waitfor=1>Shinjuku, Tokyo<waitfor=3>.
     conversation:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Vagabonds (cutscene
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 0}
+    type: 0
     textToShow: <waitfor=1>Earlier this year, the vagabonds from the <color=green>Keitosuru</color>
       gang tormented the city with reckless <color=red>crime</color><waitfor=4>.
     conversation:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Looting (cutscene)
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 0}
+    type: 0
     textToShow: <waitfor=1>Not a week has passed without them destroying and looting
       anything they can find<waitfor=4>.
     conversation:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Delinquent (cutscene)
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 0}
+    type: 0
     textToShow: <waitfor=1>The girls involved with the <color=green>Keitosuru</color>
       gang managed to break away from the <color=red>shackles of these delinquent
       men</color><waitfor=4>.
@@ -3987,10 +4024,11 @@ MonoBehaviour:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Revenge (cutscene)
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 0}
+    type: 0
     textToShow: <waitfor=1>They founded their own, the <color=purple>Zokugai</color>.
       Fueled with anger against the iniquity of the <color=green>Keitosuru</color>,
       they seek to gather new recruits to take revenge upon them<waitfor=4>.
@@ -3998,10 +4036,11 @@ MonoBehaviour:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Trouble (cutscene)
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 0}
+    type: 0
     textToShow: <waitfor=1>Blissfully unaware, <color=purple>Mikazuki</color> and
       <color=purple>Amaya</color> are on their way back from high school, where <color=red><bounce>trouble
       is just around the corner...</><waitfor=4>.
@@ -4009,46 +4048,51 @@ MonoBehaviour:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Ow 1 (cutscene)
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 0}
+    type: 0
     textToShow: <waitfor=1><shake><b><color=red>OW!</><waitfor=1>.
     conversation:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Ow 2 (cutscene)
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 0}
+    type: 0
     textToShow: <waitfor=1><shake><b><color=red>OWW!</><waitfor=1>.
     conversation:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Ow 3 (cutscene)
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 0}
+    type: 0
     textToShow: <waitfor=1><shake><b><color=red>OWWWWW!!</><waitfor=1>.
     conversation:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Argh (cutscene)
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 0}
+    type: 0
     textToShow: <waitfor=1><shake><b><color=red>ARGGHHHHH!!!!!!!</><waitfor=1>.
     conversation:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: tutorial  (conversation)
     newMusic: {fileID: 8300000, guid: 1e869d3fdbb234c4e91b0c15666c083d, type: 3}
-    type: 1
     newBackground: {fileID: 0}
+    type: 1
     textToShow: 
     conversation:
       cinematicView: 0
@@ -4096,10 +4140,11 @@ MonoBehaviour:
         textToShow: <waitfor=1><b><color=green>Press A to attack!</color><b>For PC,
           press Q!</b><waitfor=4>.
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Wave 1 (wave)
     newMusic: {fileID: 0}
-    type: 2
     newBackground: {fileID: 0}
+    type: 2
     textToShow: 
     conversation:
       cinematicView: 0
@@ -4110,10 +4155,11 @@ MonoBehaviour:
           type: 3}
         amount: 2
       allAtOnce: 0
+    spawnlocation: {fileID: 0}
   - name: Wave 2 convo (convesation)
-    newMusic: {fileID: 0}
-    type: 1
+    newMusic: {fileID: 8300000, guid: 1e869d3fdbb234c4e91b0c15666c083d, type: 3}
     newBackground: {fileID: 0}
+    type: 1
     textToShow: 
     conversation:
       cinematicView: 0
@@ -4123,10 +4169,11 @@ MonoBehaviour:
           up</color after <color=green>attacking with A!</color> <b>For PC, press
           E after attacking with Q!</b><waitfor=4>.
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Wave 2 (wave)
     newMusic: {fileID: 0}
-    type: 2
     newBackground: {fileID: 0}
+    type: 2
     textToShow: 
     conversation:
       cinematicView: 0
@@ -4137,10 +4184,11 @@ MonoBehaviour:
           type: 3}
         amount: 3
       allAtOnce: 0
+    spawnlocation: {fileID: 0}
   - name: Wave 3 convo (convesation)
-    newMusic: {fileID: 0}
-    type: 1
+    newMusic: {fileID: 8300000, guid: 1e869d3fdbb234c4e91b0c15666c083d, type: 3}
     newBackground: {fileID: 0}
+    type: 1
     textToShow: 
     conversation:
       cinematicView: 0
@@ -4149,10 +4197,11 @@ MonoBehaviour:
         textToShow: <waitfor=1><color=yellow>Press Y to Combo.</color> <b>For PC
           press R.</b> Hit those idiots with a <bounce>sucker punch!</bounce><waitfor=4>.
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Wave 3 (wave)
     newMusic: {fileID: 0}
-    type: 2
     newBackground: {fileID: 0}
+    type: 2
     textToShow: 
     conversation:
       cinematicView: 0
@@ -4163,10 +4212,11 @@ MonoBehaviour:
           type: 3}
         amount: 4
       allAtOnce: 0
+    spawnlocation: {fileID: 0}
   - name: wave 4 (convesation)
-    newMusic: {fileID: 0}
-    type: 1
+    newMusic: {fileID: 8300000, guid: 1e869d3fdbb234c4e91b0c15666c083d, type: 3}
     newBackground: {fileID: 0}
+    type: 1
     textToShow: 
     conversation:
       cinematicView: 0
@@ -4177,10 +4227,11 @@ MonoBehaviour:
         textToShow: <waitfor=1>You're on your own now girl, go kick those guys asses
           into the 90's. All the best babygirl!<waitfor=3>
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Wave 4 (wave)
     newMusic: {fileID: 0}
-    type: 2
     newBackground: {fileID: 0}
+    type: 2
     textToShow: 
     conversation:
       cinematicView: 0
@@ -4196,30 +4247,33 @@ MonoBehaviour:
           type: 3}
         amount: 1
       allAtOnce: 0
+    spawnlocation: {fileID: 0}
   - name: Joke of a man (cutscene)
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 966768986}
+    type: 0
     textToShow: <waitfor=1>I can't believe I ever let that <color=green><bounce>joke
       of a man date me</><waitfor=4>.
     conversation:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Phony crew (cutscene)
     newMusic: {fileID: 0}
+    newBackground: {fileID: 966768986}
     type: 0
-    newBackground: {fileID: 0}
     textToShow: <waitfor=1><bounce>I gotta take him down,</bounce> <color=green>and
       all his phony crew too.</color><waitfor=4>.
     conversation:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: L2 Wave 1 (wave)
     newMusic: {fileID: 8300000, guid: a93c0f8574b611f4d9ed5c1d5bc6f9fe, type: 3}
-    type: 2
     newBackground: {fileID: 0}
+    type: 2
     textToShow: 
     conversation:
       cinematicView: 0
@@ -4258,10 +4312,11 @@ MonoBehaviour:
           type: 3}
         amount: 5
       allAtOnce: 1
+    spawnlocation: {fileID: 0}
   - name: Gangsta Convo (conversation)
-    newMusic: {fileID: 0}
+    newMusic: {fileID: 8300000, guid: a93c0f8574b611f4d9ed5c1d5bc6f9fe, type: 3}
+    newBackground: {fileID: 966768986}
     type: 1
-    newBackground: {fileID: 0}
     textToShow: 
     conversation:
       cinematicView: 1
@@ -4281,10 +4336,11 @@ MonoBehaviour:
       - personSpeaking: Player
         textToShow: <waitfor=1><bounce>...............</bounce><waitfor=2>.
     waves: []
+    spawnlocation: {fileID: 0}
   - name: L2 Boss Fight (wave)
     newMusic: {fileID: 0}
-    type: 2
     newBackground: {fileID: 0}
+    type: 2
     textToShow: 
     conversation:
       cinematicView: 0
@@ -4294,11 +4350,12 @@ MonoBehaviour:
       - enemyType: {fileID: 4633986088468943449, guid: bc7a569e09e94824db0e5890f596804b,
           type: 3}
         amount: 1
-      allAtOnce: 0
+      allAtOnce: 1
+    spawnlocation: {fileID: 1829102827}
   - name: After defeat gangsta convo (conversation)
     newMusic: {fileID: 0}
-    type: 1
     newBackground: {fileID: 0}
+    type: 1
     textToShow: 
     conversation:
       cinematicView: 1
@@ -4324,46 +4381,51 @@ MonoBehaviour:
       - personSpeaking: Other
         textToShow: <waitfor=1><color=yellow><b>Good luck</><waitfor=2>.
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Scared (cutscene)
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 1915129475}
+    type: 0
     textToShow: <waitfor=1><color=purple><shake>I'm scared</><waitfor=4>.
     conversation:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Admit (cutscene)
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 0}
+    type: 0
     textToShow: <waitfor=1>I hate to admit it but<waitfor=4>.
     conversation:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Dot (cutscene)
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 0}
+    type: 0
     textToShow: <waitfor=1>........<waitfor=4>.
     conversation:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Shit (cutscene)
     newMusic: {fileID: 0}
+    newBackground: {fileID: 1915129475}
     type: 0
-    newBackground: {fileID: 0}
     textToShow: <waitfor=1><color=red><b><shake>Shit!</> I think they heard us<waitfor=4>.
     conversation:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: L3 Wave 1 (wave)
     newMusic: {fileID: 8300000, guid: 9f06f11405504cd41aec14dca52dd6d3, type: 3}
-    type: 2
     newBackground: {fileID: 0}
+    type: 2
     textToShow: 
     conversation:
       cinematicView: 0
@@ -4403,10 +4465,11 @@ MonoBehaviour:
           type: 3}
         amount: 3
       allAtOnce: 0
+    spawnlocation: {fileID: 0}
   - name: Boyfriend Convo (conversation)
-    newMusic: {fileID: 0}
+    newMusic: {fileID: 8300000, guid: 9f06f11405504cd41aec14dca52dd6d3, type: 3}
+    newBackground: {fileID: 1915129475}
     type: 1
-    newBackground: {fileID: 0}
     textToShow: 
     conversation:
       cinematicView: 1
@@ -4436,10 +4499,11 @@ MonoBehaviour:
       - personSpeaking: Boyfriend
         textToShow: <waitfor=1><b><color=red><shake>Let's see you even dare to try</><waitfor=2>.
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Boyfriend Fight (wave)
     newMusic: {fileID: 0}
-    type: 2
     newBackground: {fileID: 0}
+    type: 2
     textToShow: 
     conversation:
       cinematicView: 0
@@ -4449,11 +4513,12 @@ MonoBehaviour:
       - enemyType: {fileID: 8516799332713359205, guid: f7b7f4456538f5f40aeb227399b60871,
           type: 3}
         amount: 1
-      allAtOnce: 0
+      allAtOnce: 1
+    spawnlocation: {fileID: 970049322}
   - name: After defeat boyfriend convo (conversation)
     newMusic: {fileID: 0}
-    type: 1
     newBackground: {fileID: 0}
+    type: 1
     textToShow: 
     conversation:
       cinematicView: 1
@@ -4476,10 +4541,11 @@ MonoBehaviour:
       - personSpeaking: Player
         textToShow: <waitfor=1><color=purple><shake>Natsuki! What do you mean!</><waitfor=2>.
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Mum (conversation)
-    newMusic: {fileID: 0}
+    newMusic: {fileID: 8300000, guid: 9f06f11405504cd41aec14dca52dd6d3, type: 3}
+    newBackground: {fileID: 1915129475}
     type: 1
-    newBackground: {fileID: 0}
     textToShow: 
     conversation:
       cinematicView: 1
@@ -4529,10 +4595,11 @@ MonoBehaviour:
       - personSpeaking: Player
         textToShow: <waitfor=1><b><color=purple><shake>Mama! MAMA!</><waitfor=2>.
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Mum boss fight (wave)
     newMusic: {fileID: 0}
-    type: 2
     newBackground: {fileID: 0}
+    type: 2
     textToShow: 
     conversation:
       cinematicView: 0
@@ -4542,11 +4609,12 @@ MonoBehaviour:
       - enemyType: {fileID: 2705227902537762743, guid: c4d16e48b1796dc41b371d51758683d6,
           type: 3}
         amount: 1
-      allAtOnce: 0
+      allAtOnce: 1
+    spawnlocation: {fileID: 2098374222}
   - name: After defeat Mum (conversation)
     newMusic: {fileID: 0}
-    type: 1
     newBackground: {fileID: 0}
+    type: 1
     textToShow: 
     conversation:
       cinematicView: 1
@@ -4560,49 +4628,54 @@ MonoBehaviour:
       - personSpeaking: Mother
         textToShow: <waitfor=1><color=yellow><b>I love you</><waitfor=2>.
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Disband (cutscene)
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 0}
+    type: 0
     textToShow: <waitfor=1><color=green><bounce>With the Keitosuru disbanded, petty
       crime rates fell across the city</><waitfor=4>.
     conversation:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Fame (cutscene)
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 0}
+    type: 0
     textToShow: <waitfor=1><color=purple>The Zokugai rose to fame,</color> <color=red><bounce>running
       the cogs of criminal activity below the sidelines of their normal lives</><waitfor=4>.
     conversation:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Power (cutscene)
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 0}
+    type: 0
     textToShow: <waitfor=1><b>Power was given to those who needed it most</b><waitfor=4>.
     conversation:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Fall (cutscene)
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 0}
+    type: 0
     textToShow: <waitfor=1><color=green><shake>The fall of the delinquents was felt
       throughout the city</><waitfor=4>.
     conversation:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Business (cutscene)
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 0}
+    type: 0
     textToShow: <waitfor=1><color=purple>With the help of the Zokugai girls, Mikazuki
       and her sister, Amaya have turned to business. Planning to expand their new
       found 'Host Clubs' across Tokyo</color><waitfor=4>.
@@ -4610,10 +4683,11 @@ MonoBehaviour:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Working (cutscene)
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 0}
+    type: 0
     textToShow: <waitfor=1>Most of the ex <color=green>Keitosuru members</color>
       owed a favour to <color=purple>the Zokugai</color>, with the majority working
       their way up to being hosts<waitfor=4>.
@@ -4621,87 +4695,98 @@ MonoBehaviour:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Success (cutscene)
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 0}
+    type: 0
     textToShow: <waitfor=1>The clubs do well, they're more successful than they ever
       anticipated<waitfor=4>.
     conversation:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Rival (cutscene)
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 0}
+    type: 0
     textToShow: <waitfor=1>So much so, rival host clubs are popping up, competing
       for <color=green><b>money</> and <color=yellow><b>fame</><waitfor=4>.
     conversation:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Long (cutscene)
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 0}
+    type: 0
     textToShow: <waitfor=1>It can only be so long, <color=red><b><bounce>before the
       cycle starts again</><waitfor=4>.
     conversation:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: The End (cutscene)
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 0}
+    type: 0
     textToShow: <waitfor=1>The End=4>.
     conversation:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Adele (cutscene)
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 0}
+    type: 0
     textToShow: '<waitfor=1><b>Adele Richards : Art</b><waitfor=4>.'
     conversation:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Phoebe (cutscene)
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 0}
+    type: 0
     textToShow: '<waitfor=1><b>Phoebe Smih : Narrative / Design</b><waitfor=4>.'
     conversation:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Tom (cutscene)
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 0}
+    type: 0
     textToShow: '<waitfor=1><b>Tom Coeckelbergh : Programming / Design</b><waitfor=4>.'
     conversation:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   - name: Rita (cutscene)
     newMusic: {fileID: 0}
-    type: 0
     newBackground: {fileID: 0}
+    type: 0
     textToShow: '<waitfor=1><b>Rita Rosa : Programming / AI</b><waitfor=4>.'
     conversation:
       cinematicView: 0
       sentences: []
     waves: []
+    spawnlocation: {fileID: 0}
   gangstaPoint: {fileID: 1829102827}
   gangstaBoss: {fileID: 2494575139155977490, guid: df00b767d1a81d2468313e96df1b7f8e,
     type: 3}
   boyfriendPoint: {fileID: 970049322}
   boyfriendBoss: {fileID: 6557895864597761746, guid: 780c752591724aa48811e7ab574ecbcf,
     type: 3}
+  momPoint: {fileID: 2098374222}
+  momBoss: {fileID: 4910760454563332804, guid: 90eafa13ae3c12f4ab03aff1910794ee, type: 3}
   eventCounter: 0
 --- !u!4 &1927522426
 Transform:
@@ -4718,18 +4803,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1927522427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1927522424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96c5c2fcd15c1c842af64ba49a082623, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1993944304
 GameObject:
   m_ObjectHideFlags: 0
@@ -4912,6 +4985,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2098374222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2098374223}
+  m_Layer: 0
+  m_Name: MomPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2098374223
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098374222}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20.53, y: -1.34, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1152676763}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3999895709727492692
 PrefabInstance:
   m_ObjectHideFlags: 0

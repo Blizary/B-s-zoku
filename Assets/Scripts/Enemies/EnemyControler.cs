@@ -209,9 +209,19 @@ public class EnemyControler : MonoBehaviour
    
         yield return new WaitForSeconds(1f);
         manager.UpdateEnemiesKilled();
+        if(!interactable)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            myAnimator.SetBool("PosDeath",true);
+        }
+       
+    }
 
-        Destroy(this.gameObject);
-        
+    public void LateDestroy()
+    {
 
     }
 

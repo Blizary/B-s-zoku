@@ -9,6 +9,7 @@ public class TextLocations : MonoBehaviour
     public GameObject textBuble;
     public GameObject playerLocation;
     public GameObject spriteR;
+    public AncorControl ancor;
 
     private string newText;
     private MainLevelManager manager;
@@ -21,6 +22,10 @@ public class TextLocations : MonoBehaviour
 
     public void DisplayText(string _text)
     {
+        if(ancor!=null)
+        {
+            ancor.GetComponent<AncorControl>().LateDestroy();
+        }
         spriteR.SetActive(true);
         MoveOrder();
         newText = _text;

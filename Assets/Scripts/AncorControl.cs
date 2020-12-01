@@ -34,4 +34,12 @@ public class AncorControl : MonoBehaviour
             
         }
     }
+
+    public void LateDestroy()
+    {
+        if (GameObject.FindGameObjectWithTag(ancor))
+        {
+            Destroy(GameObject.FindGameObjectWithTag(ancor).transform.parent.gameObject);
+        }
+    }
 }
