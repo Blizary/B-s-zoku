@@ -4041,9 +4041,9 @@ MonoBehaviour:
     newMusic: {fileID: 0}
     newBackground: {fileID: 0}
     type: 0
-    textToShow: <waitfor=1>Blissfully unaware, <color=purple>Mikazuki</color> and
-      <color=purple>Amaya</color> are on their way back from high school, where <color=red><bounce>trouble
-      is just around the corner...</><waitfor=4>.
+    textToShow: <waitfor=1>Blissfully unaware, <color=purple>Mikazuki</color> is
+      on her way way back from high school, where <color=red><bounce>trouble is just
+      around the corner...</><waitfor=4>.
     conversation:
       cinematicView: 0
       sentences: []
@@ -4108,8 +4108,9 @@ MonoBehaviour:
         textToShow: <waitfor=1>No. I.. I mean, imagine if they asked questions, I
           know I can't.<waitfor=2>.
       - personSpeaking: Player
-        textToShow: <waitfor=1>He's a <shake><color=red>fucking arsehole!</> I can't
-          let him get away with this shit. He just <b><color=red><shake>HIT</> me<waitfor=2>.
+        textToShow: <waitfor=1>He's a <shake><color=red>fucking arsehole!</color></shake>
+          I can't let him get away with this shit. He just <color=red><shake>HIT</>
+          me<waitfor=2>.
       - personSpeaking: Player
         textToShow: <waitfor=1>In the <shake><color=red>MIDDLE</> of the street.
           In the <color=red><shake>MIDDLE</> of the day.  And he took my money. Not
@@ -4124,21 +4125,19 @@ MonoBehaviour:
       - personSpeaking: Player
         textToShow: <waitfor=1>Damn<waitfor=1>.
       - personSpeaking: Tutorial
-        textToShow: <waitfor=1><shake><color=yellow>Hey! You!</><waitfor=2>.
+        textToShow: <waitfor=1><shake><color=yellow>Hey! You!</color></shake><waitfor=2>.
       - personSpeaking: Tutorial
         textToShow: <waitfor=1>I saw the whole thing you know.<waitfor=2>.
       - personSpeaking: Tutorial
-        textToShow: <waitfor=1>What a lowlife. These guys <color=red><bounce>reeeeally</>
+        textToShow: <waitfor=1>What a lowlife. These guys <color=red><bounce>reeeeally</color></bounce>
           don't know what they're in for.<waitfor=2>.
       - personSpeaking: Tutorial
         textToShow: <waitfor=1>Hey come on, let's get your own back, I'll teach you
           a thing or two.<waitfor=2>.
       - personSpeaking: Tutorial
-        textToShow: <waitfor=1>Use the left Joystick or D-Pad to move. For PC, use
-          WASD for Player 1 and Arrow Keys for Player 2<waitfor=4>.
+        textToShow: <waitfor=1>Use the left Joystick  to move. For PC, use WASD<waitfor=4>.
       - personSpeaking: Tutorial
-        textToShow: <waitfor=1><b><color=green>Press A to attack!</color><b>For PC,
-          press Q!</b><waitfor=4>.
+        textToShow: <waitfor=1><color=green>Press A to attack!</> For PC, press Q!<waitfor=4>.
     waves: []
     spawnlocation: {fileID: 0}
   - name: Wave 1 (wave)
@@ -4166,8 +4165,8 @@ MonoBehaviour:
       sentences:
       - personSpeaking: Tutorial
         textToShow: <waitfor=1>I know you got it in you! <color=red>Press B to follow
-          up</color after <color=green>attacking with A!</color> <b>For PC, press
-          E after attacking with Q!</b><waitfor=4>.
+          up</> after <color=green>attacking with A!</color> For PC, press E after
+          attacking with Q!<waitfor=4>.
     waves: []
     spawnlocation: {fileID: 0}
   - name: Wave 2 (wave)
@@ -4194,8 +4193,8 @@ MonoBehaviour:
       cinematicView: 0
       sentences:
       - personSpeaking: Tutorial
-        textToShow: <waitfor=1><color=yellow>Press Y to Combo.</color> <b>For PC
-          press R.</b> Hit those idiots with a <bounce>sucker punch!</bounce><waitfor=4>.
+        textToShow: <waitfor=1><color=yellow>Press Y to Combo.</color> For PC press
+          R. Hit those idiots with a <bounce>sucker punch!</bounce><waitfor=4>.
     waves: []
     spawnlocation: {fileID: 0}
   - name: Wave 3 (wave)
@@ -4224,8 +4223,8 @@ MonoBehaviour:
       - personSpeaking: Tutorial
         textToShow: <waitfor=1>...<waitfor=2>.
       - personSpeaking: Tutorial
-        textToShow: <waitfor=1>You're on your own now girl, go kick those guys asses
-          into the 90's. All the best babygirl!<waitfor=3>
+        textToShow: <waitfor=1>You're on your own now, go kick those guys asses into
+          the 90's. All the best babygirl!<waitfor=3>
     waves: []
     spawnlocation: {fileID: 0}
   - name: Wave 4 (wave)
@@ -4314,7 +4313,7 @@ MonoBehaviour:
       allAtOnce: 1
     spawnlocation: {fileID: 0}
   - name: Gangsta Convo (conversation)
-    newMusic: {fileID: 8300000, guid: a93c0f8574b611f4d9ed5c1d5bc6f9fe, type: 3}
+    newMusic: {fileID: 8300000, guid: 143b53e4f86bf504a99eac9112dadc44, type: 3}
     newBackground: {fileID: 966768986}
     type: 1
     textToShow: 
@@ -4326,15 +4325,15 @@ MonoBehaviour:
       - personSpeaking: Other
         textToShow: <waitfor=1>I guess you knew we were <color=red>coming for you</color><waitfor=2>.
       - personSpeaking: Other
-        textToShow: <waitfor=1><color=purple><bounce>Two cute, cute girls</><waitfor=2>.
+        textToShow: <waitfor=1><color=purple><bounce>You've always been so cute</><waitfor=2>.
       - personSpeaking: Other
         textToShow: <waitfor=1>I can see why he went there. <color=red>You got some
           nice assets on you</color> <color=purple>Mikazuki</color><waitfor=2>.
       - personSpeaking: Player
-        textToShow: <waitfor=1> <color=red><shake><b>Fuck you, you bastard! How dare
+        textToShow: <waitfor=1> <color=red><shake>Fuck you, you bastard! How dare
           you speak to me that!!!</><waitfor=2>.
       - personSpeaking: Player
-        textToShow: <waitfor=1><bounce>...............</bounce><waitfor=2>.
+        textToShow: <waitfor=1><bounce>...............</bounce><waitfor=1>.
     waves: []
     spawnlocation: {fileID: 0}
   - name: L2 Boss Fight (wave)
@@ -4361,7 +4360,7 @@ MonoBehaviour:
       cinematicView: 1
       sentences:
       - personSpeaking: Player
-        textToShow: <waitfor=1><color=red>Tell us where he is. Or I'll</color> <color=red><shake><b>KILL</>
+        textToShow: <waitfor=1><color=red>Tell us where he is. Or I'll</color> <color=red><shake>KILL</>
           <color=red>you!</color><waitfor=2>.
       - personSpeaking: Player
         textToShow: <waitfor=1><color=red>I'm not</color> <shake><color=red>fucking
@@ -4370,16 +4369,17 @@ MonoBehaviour:
         textToShow: <waitfor=1>Where did a <color=purple><shake>little girl like
           you</> learn to fight like that?<waitfor=2>.
       - personSpeaking: Other
-        textToShow: <waitfor=1..........<waitfor=2>.
+        textToShow: <waitfor=1>..........<waitfor=1>.
       - personSpeaking: Other
         textToShow: <waitfor=1>Fine. I want out this life, I'm done with it. <color=yellow>I
           got kids to look after. I'm no role model. Look at me</color><waitfor=2>.
       - personSpeaking: Other
-        textToShow: <waitfor=1>Hes's in the <color=green><b>Yamaguchi Hideout</><waitfor=2>.
+        textToShow: <waitfor=1>He'll be here after dark. <color=green>Hide it out,
+          lay low, hell I don't know</color><waitfor=2>.
       - personSpeaking: Other
-        textToShow: <waitfor=1>Take the <b>path ahead</b> and you will get there<waitfor=2>.
+        textToShow: <waitfor=1>Just look after yourself<waitfor=2>.
       - personSpeaking: Other
-        textToShow: <waitfor=1><color=yellow><b>Good luck</><waitfor=2>.
+        textToShow: <waitfor=1><color=yellow>Good luck</color><waitfor=2>.
     waves: []
     spawnlocation: {fileID: 0}
   - name: Scared (cutscene)
@@ -4406,7 +4406,7 @@ MonoBehaviour:
     newMusic: {fileID: 0}
     newBackground: {fileID: 0}
     type: 0
-    textToShow: <waitfor=1>........<waitfor=4>.
+    textToShow: <waitfor=1>........<waitfor=2>.
     conversation:
       cinematicView: 0
       sentences: []
@@ -4416,7 +4416,7 @@ MonoBehaviour:
     newMusic: {fileID: 0}
     newBackground: {fileID: 1915129475}
     type: 0
-    textToShow: <waitfor=1><color=red><b><shake>Shit!</> I think they heard us<waitfor=4>.
+    textToShow: <waitfor=1><color=red><shake>Shit!</> I think they heard us<waitfor=4>.
     conversation:
       cinematicView: 0
       sentences: []
@@ -4484,9 +4484,10 @@ MonoBehaviour:
           like a</color> <color=green>oyabun</color> <color=red>all of a sudden</color><waitfor=2>.
       - personSpeaking: Boyfriend
         textToShow: <waitfor=1><color=red>Well I hate to remind you,</color><color=purple>Mikazuki</color>.
-          <b><color=red><shake>but I'm the one who has the dick here, Not you</><waitfor=2>.
+          <color=red><shake>but I'm the one who has the cock and balls here, Not
+          you</><waitfor=2>.
       - personSpeaking: Player
-        textToShow: <waitfor=1><b><color=red><shake>Go fuck yourself, Natsuki!</><waitfor=2>.
+        textToShow: <waitfor=1><color=red><shake>Go fuck yourself, Natsuki!</><waitfor=2>.
       - personSpeaking: Player
         textToShow: <waitfor=1><color=red><shake>You're a smug piece of shit.</><waitfor=2>.
       - personSpeaking: Player
@@ -4495,7 +4496,7 @@ MonoBehaviour:
       - personSpeaking: Boyfriend
         textToShow: <waitfor=1><b><color=red><shake>HAHAHAHAHA</><waitfor=2>.
       - personSpeaking: Boyfriend
-        textToShow: <waitfor=1><color=red><bounce>You're serious huh?</><waitfor=2>.
+        textToShow: <waitfor=1><color=red><bounce>Hold up...you're serious huh?</><waitfor=2>.
       - personSpeaking: Boyfriend
         textToShow: <waitfor=1><b><color=red><shake>Let's see you even dare to try</><waitfor=2>.
     waves: []
@@ -4528,11 +4529,11 @@ MonoBehaviour:
       - personSpeaking: Player
         textToShow: <waitfor=1><bounce><color=green>I'm sorry</><waitfor=2>.
       - personSpeaking: Boyfriend
-        textToShow: <waitfor=1><color=red><shake>She</> <bouncewill be here soon</bounce><waitfor=2>.
+        textToShow: <waitfor=1><color=red><shake>She</> <bounce>will be here soon</bounce><waitfor=2>.
       - personSpeaking: Player
         textToShow: <waitfor=1><color=purple>It hurts me to see you like this</color><waitfor=2>.
       - personSpeaking: Player
-        textToShow: <waitfor=1><color=purple><b><shake>For gods sake Natsuki!</><waitfor=2>.
+        textToShow: <waitfor=1><color=purple><shake>For gods sake Natsuki!</><waitfor=2>.
       - personSpeaking: Player
         textToShow: <waitfor=1><color=purple>You never needed to get into this</color><waitfor=2>.
       - personSpeaking: Boyfriend
@@ -4543,7 +4544,7 @@ MonoBehaviour:
     waves: []
     spawnlocation: {fileID: 0}
   - name: Mum (conversation)
-    newMusic: {fileID: 8300000, guid: 9f06f11405504cd41aec14dca52dd6d3, type: 3}
+    newMusic: {fileID: 8300000, guid: b410de2b350e10643a13390a66c04d8a, type: 3}
     newBackground: {fileID: 1915129475}
     type: 1
     textToShow: 
@@ -4555,7 +4556,7 @@ MonoBehaviour:
       - personSpeaking: Player
         textToShow: <waitfor=1><color=purple><bounce>............Mama?</><waitfor=2>.
       - personSpeaking: Mother
-        textToShow: <waitfor=1><color=green>Darling</color>=2>.
+        textToShow: <waitfor=1><color=green>Darling</color><waitfor=2>.
       - personSpeaking: Mother
         textToShow: <waitfor=1><color=green>My beautiful little flower</color><waitfor=2>.
       - personSpeaking: Mother
@@ -4571,9 +4572,10 @@ MonoBehaviour:
           I wanted to shelter you from all harm</color><waitfor=2>.
       - personSpeaking: Mother
         textToShow: <waitfor=1><color=green>Grow up well, find a nice husband. Start
-          a beautiful family>/color><waitfor=2>.
+          a beautiful family</color><waitfor=2>.
       - personSpeaking: Mother
-        textToShow: <waitfor=1><color=yellow<shake><b>Now.....I can't live with this</><waitfor=2>.
+        textToShow: <waitfor=1><color=yellow><shake><b>Now.....I can't live with
+          this</><waitfor=2>.
       - personSpeaking: Player
         textToShow: <waitfor=1><color=purple>I never meant... to get caught up...</color><waitfor=2>.
       - personSpeaking: Player
@@ -4620,13 +4622,13 @@ MonoBehaviour:
       cinematicView: 1
       sentences:
       - personSpeaking: Mother
-        textToShow: <waitfor=1><color=yellow>My darlings</color><waitfor=2>.
+        textToShow: <waitfor=1><color=yellow>My darling</color><waitfor=2>.
       - personSpeaking: Mother
         textToShow: <waitfor=1><color=yellow>Carry on the legacy</color><waitfor=2>.
       - personSpeaking: Mother
-        textToShow: <waitfor=1><color=yellow>Be true to yourselves</color><waitfor=2>.
+        textToShow: <waitfor=1><color=yellow>Be true to yourself</color><waitfor=2>.
       - personSpeaking: Mother
-        textToShow: <waitfor=1><color=yellow><b>I love you</><waitfor=2>.
+        textToShow: <waitfor=1><color=yellow>I love you</color><waitfor=2>.
     waves: []
     spawnlocation: {fileID: 0}
   - name: Disband (cutscene)
@@ -4655,7 +4657,7 @@ MonoBehaviour:
     newMusic: {fileID: 0}
     newBackground: {fileID: 0}
     type: 0
-    textToShow: <waitfor=1><b>Power was given to those who needed it most</b><waitfor=4>.
+    textToShow: <waitfor=1>Power was given to those who needed it most<waitfor=4>.
     conversation:
       cinematicView: 0
       sentences: []
@@ -4712,7 +4714,7 @@ MonoBehaviour:
     newBackground: {fileID: 0}
     type: 0
     textToShow: <waitfor=1>So much so, rival host clubs are popping up, competing
-      for <color=green><b>money</> and <color=yellow><b>fame</><waitfor=4>.
+      for <color=green>money</color> and <color=yellow>fame</color><waitfor=4>.
     conversation:
       cinematicView: 0
       sentences: []
@@ -4722,7 +4724,7 @@ MonoBehaviour:
     newMusic: {fileID: 0}
     newBackground: {fileID: 0}
     type: 0
-    textToShow: <waitfor=1>It can only be so long, <color=red><b><bounce>before the
+    textToShow: <waitfor=1>It can only be so long, <color=red><bounce>before the
       cycle starts again</><waitfor=4>.
     conversation:
       cinematicView: 0
@@ -4733,7 +4735,7 @@ MonoBehaviour:
     newMusic: {fileID: 0}
     newBackground: {fileID: 0}
     type: 0
-    textToShow: <waitfor=1>The End=4>.
+    textToShow: <waitfor=1>The End<waitfor=4>.
     conversation:
       cinematicView: 0
       sentences: []
@@ -4753,7 +4755,7 @@ MonoBehaviour:
     newMusic: {fileID: 0}
     newBackground: {fileID: 0}
     type: 0
-    textToShow: '<waitfor=1><b>Phoebe Smih : Narrative / Design</b><waitfor=4>.'
+    textToShow: '<waitfor=1><b>Phoebe Smith : Narrative / Design</b><waitfor=4>.'
     conversation:
       cinematicView: 0
       sentences: []
@@ -4777,6 +4779,20 @@ MonoBehaviour:
     conversation:
       cinematicView: 0
       sentences: []
+    waves: []
+    spawnlocation: {fileID: 0}
+  - name: Don't look at me!
+    newMusic: {fileID: 0}
+    newBackground: {fileID: 0}
+    type: 1
+    textToShow: 
+    conversation:
+      cinematicView: 0
+      sentences:
+      - personSpeaking: Player
+        textToShow: <waitfor=1>Jesus, don't just sit there staring<waitfor=2>.
+      - personSpeaking: Player
+        textToShow: <waitfor=1>Close the game for gods sake!<waitfor=2>.
     waves: []
     spawnlocation: {fileID: 0}
   gangstaPoint: {fileID: 1829102827}
