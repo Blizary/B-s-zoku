@@ -11,7 +11,7 @@ public class TextLocations : MonoBehaviour
     public GameObject spriteR;
     public AncorControl ancor;
 
-    private string newText;
+    public string newText;
     private MainLevelManager manager;
 
     void Start()
@@ -22,13 +22,14 @@ public class TextLocations : MonoBehaviour
 
     public void DisplayText(string _text)
     {
-        if(ancor!=null)
+        newText = _text;
+        if (ancor!=null)
         {
             ancor.GetComponent<AncorControl>().LateDestroy();
         }
         spriteR.SetActive(true);
         MoveOrder();
-        newText = _text;
+        
 
     }
 
@@ -37,12 +38,12 @@ public class TextLocations : MonoBehaviour
         if(Vector2.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, playerLocation.transform.position) >= 1)
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().IssueMovement(playerLocation.transform, this);
-            Debug.Log("Player is ordered to move");
+            //Debug.Log("Player is ordered to move");
         }
         else
         {
             ShowText();
-            Debug.Log("Player is there");
+            //Debug.Log("Player is there");
         }
         
     }

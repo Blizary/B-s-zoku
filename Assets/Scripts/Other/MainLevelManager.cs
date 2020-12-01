@@ -20,9 +20,11 @@ public class MainLevelManager : MonoBehaviour
     public TextAnimatorPlayer blackScreenText;
     public Text pausedText;
     public GameObject background;
+    public GameObject textBackground;
     public GameObject dayBackground;
     public GameObject eveningBackground;
     public GameObject nightBackground;
+    public GameObject endButton;
 
     public List<BsZokuEvent> levelEvents;
 
@@ -105,6 +107,7 @@ public class MainLevelManager : MonoBehaviour
     {
         if (levelEvents.Count!=0)
         {
+            Debug.Log("still has events");
             currentEvent = levelEvents[0];
             if (currentEvent.newMusic != null)
             {
@@ -132,12 +135,10 @@ public class MainLevelManager : MonoBehaviour
                     
                     if(GameObject.FindGameObjectWithTag("Player"))
                     {
-                        Debug.Log("obj found : " + GameObject.FindGameObjectWithTag("Player"));
                         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
 
                         foreach (GameObject p in players)
                         {
-                            Debug.Log("i found something and it is "+p.name);
                             if(p.GetComponent<PlayerController>())
                             {
                                 p.GetComponent<PlayerController>().SetFreezeState(true);
@@ -146,14 +147,18 @@ public class MainLevelManager : MonoBehaviour
                         }
                     }
                    
-                    
-                    
                     blackScreenOn = true;
                     blackScreen.SetActive(true);
+                    textBackground.SetActive(true);
                     blackScreenText.ShowText(currentEvent.textToShow);
                     break;
                 case BsZokuEvent.BsZokuEventType.Conversation:
                     //STOP PLAYER MOVEMNT HERE
+                    //check blackscreen
+                    if(blackScreen.activeInHierarchy)
+                    {
+                        StartCoroutine(BlackScreenFade());
+                    }
 
                     if (GameObject.FindGameObjectWithTag("Player"))
                     {
@@ -171,6 +176,11 @@ public class MainLevelManager : MonoBehaviour
                     conversationOn = true;
                     break;
                 case BsZokuEvent.BsZokuEventType.Waves:
+                    //check blackscreen
+                    if (blackScreen.activeInHierarchy)
+                    {
+                        StartCoroutine(BlackScreenFade());
+                    }
                     wavesOn = true;
                     enemiesKilledInWave = 0;
                     break;
@@ -183,10 +193,18 @@ public class MainLevelManager : MonoBehaviour
         else
         {
             Debug.Log("END OF SET EVENTS");
+            endButton.SetActive(true);
         }
         
     }
 
+    IEnumerator BlackScreenFade()
+    {
+        textBackground.SetActive(false);
+        blackScreen.transform.GetChild(0).GetComponent<Animator>().SetTrigger("Fade");
+        yield return new WaitForSeconds(1);
+        blackScreen.SetActive(false);
+    }
 
     void WaveController()
     {
@@ -333,22 +351,33 @@ public class MainLevelManager : MonoBehaviour
             }
             else //conversation finished
             {
-                levelEvents.RemoveAt(0);
-                enemyText.GetComponent<TextLocations>().DisableVisuals();
-                sentenceShown = false;
                 conversationOn = false;
-                conversationBlackBars.SetActive(false);
-                //GIVE PLAYER CONTROLLS BACK
-                GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-                foreach (GameObject p in players)
-                {
-                    p.GetComponent<PlayerController>().SetFreezeState(false);
-                    p.GetComponent<PlayerController>().RemoveControls(false);
-                }
-                Debug.Log("conversation event complete");
-                UpdateEvent();
+                StartCoroutine(WaitAfterAllConvo());
             }
         }
+    }
+    IEnumerator WaitAfterAllConvo()
+    {
+        yield return new WaitForSeconds(1);
+        playerText.gameObject.transform.parent.gameObject.SetActive(false);
+        if (enemyText != null)
+        {
+            enemyText.GetComponent<TextLocations>().SetAsleepDisplay();
+            enemyText.GetComponent<TextLocations>().DisableVisuals();
+        }
+        levelEvents.RemoveAt(0);
+        
+        sentenceShown = false;
+        conversationBlackBars.SetActive(false);
+        //GIVE PLAYER CONTROLLS BACK
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject p in players)
+        {
+            p.GetComponent<PlayerController>().SetFreezeState(false);
+            p.GetComponent<PlayerController>().RemoveControls(false);
+        }
+        Debug.Log("conversation event complete");
+        UpdateEvent();
     }
 
     public void RestartLevel()
@@ -395,7 +424,7 @@ public class MainLevelManager : MonoBehaviour
     public void OnBlackScreenTextShown()
     {
 
-        blackScreen.SetActive(false);
+        //blackScreen.SetActive(false);
         blackScreenOn = false;
         //GIVE PLAYER CONTROLLS BACK
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
@@ -413,11 +442,10 @@ public class MainLevelManager : MonoBehaviour
     public void NextSentence()
     {
         playerText.gameObject.transform.parent.gameObject.SetActive(false);
-        if(enemyText!=null)
+        if (enemyText != null)
         {
             enemyText.GetComponent<TextLocations>().SetAsleepDisplay();
         }
-
         sentenceShown = false;
         currentEvent.conversation.sentences.RemoveAt(0);
     }
@@ -426,6 +454,12 @@ public class MainLevelManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("LastWave", eventCounter);
         Debug.Log("KEY WAS SET");
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("Quit request initiated - Only works in builds");
+        Application.Quit();
     }
 
 }
